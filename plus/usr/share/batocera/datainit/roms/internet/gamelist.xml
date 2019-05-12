@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<gameList>
+    <game>
+        <path>./#mozilla-firefox.txt</path>
+        <emulator>NAVEGADOR</emulator>
+        <core>FIREFOX</core>
+        <name>#MOZILA-FIREFOX</name>
+        <desc>navegador firefox, adicionado no batocera por alexandre freire dos santos.</desc>
+        <image>./downloaded_images/#mozilla-firefox-image.png</image>
+        <genre>navegador</genre>
+    </game>
+    <game>
+        <path>./AZVAREL.txt</path>
+        <name>CANAL - AZVAREL</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/AZVAREL-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./BATOCERAPLUS.txt</path>
+        <name>CANAL - BATOCERA.PLUS</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/BATOCERAPLUS-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./BRAVOARCADES.txt</path>
+        <name>CANAL - BRAVO ARCADES</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/BRAVOARCADES-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./CLEBINHORJ.txt</path>
+        <name>CANAL - CLEBINHO RJ</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/CLEBINHORJ-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./COMETSARCADE.txt</path>
+        <name>CANAL - COMETS ARCADE</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/COMETSARCADE-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./GUMEDINA.txt</path>
+        <name>CANAL - GUMEDINA</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/GUMEDINA-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./LICONVIANA.txt</path>
+        <name>CANAL - LICON VIANA</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/LICONVIANA-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./RODRIGODIGOLA.txt</path>
+        <name>CANAL - RODRIGO DIGOLA</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/RODRIGODIGOLA-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./SERGIOGRAÇAS.txt</path>
+        <name>CANAL - SERGIO GRAÇAS</name>
+        <desc>CANAL DE YOUTUBE RELACIONADO A EMULAÇÃO E RETRO GAMES, COM DICAS TUTORIAIS, COM 
+BASE SISTEMAS COMO BATOCERA, RECALBOX E RETROPIE. ESTES CANAIS SÃO DE PARCEIROS
+QUE CONTRIBUEM DE ALGUMA FORMA PARA A COMUNIDADE.</desc>
+        <image>./downloaded_images/SERGIOGRAÇAS-image.png</image>
+        <genre>CANAL YOUTUBE</genre>
+    </game>
+    <game>
+        <path>./ALIEXPRESS.txt</path>
+        <name>COMERCIAL - ALIEXPRESS</name>
+        <desc>aliexpress é um serviço de varejo on-line fundado em 2010, pertencente ao alibaba group ou grupo alibaba  . é um grupo de empresas com sede em hangzhou, china, de propriedade privada baseada em e-commerce na internet, incluindo sites online de business-to-business, serviços de varejo e pagamento online, um motor de busca para compras e serviços de computação na nuvem centrados em dados.</desc>
+        <image>./downloaded_images/ALI-image.png</image>
+        <genre>site venda</genre>
+    </game>
+    <game>
+        <path>./AMERICANAS.txt</path>
+        <name>COMERCIAL - AMERICANAS</name>
+        <desc>lojas americanas s.a. (b3 lame3, lame4) é uma empresa brasileira do segmento de varejo fundada em 1929 na cidade de niterói (rio de janeiro) pelo austríaco max landesmann e pelos norte-americanos john lee, glen matson, james marshall e batson borger. a empresa conta com mais de 1320 estabelecimentos de vendas em todo o brasil. é a quarta maior empresa varejista do país, segundo ranking do ibevar de 2015.</desc>
+        <image>./downloaded_images/AMERICANAS-image.png</image>
+        <genre>site vendas</genre>
+    </game>
+    <game>
+        <path>./FOLHADESÃOPAULO.txt</path>
+        <name>PORTAL - FOLHA DE SÃO PAULO</name>
+        <desc>folha de s.paulo[nota 1] é um jornal brasileiro editado na cidade de são paulo e jornal de maior circulação do brasil, com 326.573 exemplares (incluindo assinantes digitais), segundo o instituto verificador de comunicação (ivc),[1] em maio de 2018.fundada por um grupo de jornalistas liderado por olival costa e pedro cunha em 19 de fevereiro de 1921, a folha foi criada em oposição ao principal jornal da cidade, o estado de s. paulo, que representava as elites rurais e assumia uma posição mais conservadora, tradicional e rígida.[2] em 1950, todas as folhas passaram a ser impressas num prédio na alameda barão de campinas, ampliado no final dos anos 1960 com a construção de um segundo prédio na alameda barão de limeira,[3] no bairro dos campos elísios. hoje, esse prédio é a entrada principal da empresa.</desc>
+        <image>./downloaded_images/FOLHADESÃOPAULO-image.png</image>
+        <genre>noticias</genre>
+    </game>
+    <game>
+        <path>./GLOBO.txt</path>
+        <name>PORTAL - GLOBO</name>
+        <desc>globo.com é um portal de notícias pertencente ao maior grupo de mídia da américa latina, o grupo globo. a empresa possui aproximadamente 500 mil assinantes, além de hospedar quase 700 sites em próprios e filiados. a globo.com é o portal de internet em língua portuguesa mais acessado do mundo, sendo também o portal mais acessado do brasil, de acordo com dados da alexa internet.[3][4][5]</desc>
+        <image>./downloaded_images/GLOBO-image.png</image>
+        <genre>noticias</genre>
+    </game>
+    <game>
+        <path>./FACEBOOK.txt</path>
+        <name>SOCIAL - FACEBOOK</name>
+        <desc>facebook é uma mídia social e rede social virtual lançada em 4 de fevereiro de 2004, operado e de propriedade privada da facebook inc..[5] em 4 de outubro de 2012, o facebook atingiu a marca de 1 bilhão de usuários ativos, sendo por isso a maior rede social virtual em todo o mundo.[6] em 27 de junho de 2016, o facebook atingiu a marca de 2 bilhões de usuários ativos.[7] o nome do serviço decorre o nome coloquial para o livro dado aos alunos no início do ano letivo por algumas administrações universitárias nos estados unidos para ajudar os alunos a conhecerem uns aos outros. o facebook permite que qualquer usuário que declare ter pelo menos 13 anos possa se tornar usuário registrado do site.</desc>
+        <image>./downloaded_images/FACEBOOK-image.png</image>
+        <genre>rede social</genre>
+    </game>
+    <game>
+        <path>./MERCADOLIVRE.txt</path>
+        <name>COMERCIAL - MERCADO LIVRE</name>
+        <desc>o mercadolivre (em português) ou mercadolibre (em espanhol) (nasdaq meli) é uma empresa argentina de tecnologia que oferece soluções de comércio eletrônico para que pessoas e empresas possam comprar, vender, pagar, anunciar e enviar produtos por meio da internet. opera em 19 países, tem cerca de 4 mil funcionários e é o site de e-commerce mais popular da américa latina em número de visitantes.[5] a empresa mantém operações na argentina, bolívia, brasil, chile, colômbia, costa rica, equador, el salvador, guatemala, honduras, méxico, nicarágua, panamá, paraguai, peru, república dominicana, uruguai e venezuela.[6] até 2016, o mercadolivre contava com 174,2 milhões de usuários na américa latina.[4]</desc>
+        <image>./downloaded_images/MERCADOLIVRE-image.png</image>
+        <genre>negocios</genre>
+    </game>
+    <game>
+        <path>./OLX.txt</path>
+        <name>COMERCIAL - OLX</name>
+        <desc>olx é uma empresa global de comércio eletrônico, sediada em amsterdam, países baixos. atua em 118 países[1], publicando anúncios classificados na internet. foi fundada em março de 2006 pelos empresários fabrice grinda[2] e alejandro oxenford[3].</desc>
+        <image>./downloaded_images/OLX-image.png</image>
+        <genre>negocios</genre>
+    </game>
+    <game>
+        <path>./RECLAMEAQUI.txt</path>
+        <name>COMERCIAL - RECLAME AQUI</name>
+        <desc>reclame aqui é um site brasileiro de reclamações contra empresas sobre atendimento, compra, venda, produtos e serviços.[2][3] sob o controle da holding óbvio brasil,[4] o site oferece serviços gratuitos, tanto para os consumidores postarem suas reclamações quanto para as empresas responderem a elas. foi fundado por um grupo de quatro sócios, dentre eles três administradores de sistemas e um publicitário.[5]</desc>
+        <image>./downloaded_images/RECLAMEAQUI-image.png</image>
+        <genre>prestação serviço</genre>
+    </game>
+    <game>
+        <path>./BATOCERA.txt</path>
+        <name>DOWNLOADS  - BATOCERA</name>
+        <desc>site do sistema de emulação batocera onde pode fazer dowload do sistema, participar d forum e mais informaçãoes</desc>
+        <image>./downloaded_images/BATOCERA-image.png</image>
+        <genre>fórum</genre>
+    </game>
+    <game>
+        <path>./GAMETRONIK.txt</path>
+        <name>DOWNLOADS - GAMETRONIK</name>
+        <desc>site de jogos e rooms para varios sistemas de consoles e arcades.</desc>
+        <image>./downloaded_images/GAMETRONIK-image.png</image>
+        <genre>games</genre>
+    </game>
+    <game>
+        <path>./PARCEIROSDAEMULAÇÃO.txt</path>
+        <name>DOWNLOADS - PARCEIROS DA EMULAÇÃO</name>
+        <desc>site, criado por sergio graças onde são disponiblizados rooms, temas, bios e imagens prontas de sistemas de retrogames batocera e recalbox.</desc>
+        <image>./downloaded_images/PARCEIROSDAEMULAÇÃO-image.png</image>
+        <genre>games</genre>
+    </game>
+    <game>
+        <path>./friv.txt</path>
+        <name>GAMES - FRIV</name>
+        <desc>são chamados jogos on-line os jogos eletrônicos jogados via internet. neles, um jogador com um computador,vídeo game ou celular conectado à rede pode jogar com outros sem que ambos precisem estar no mesmo ambiente, sem sair de casa, o jogador pode desafiar adversários que estejam em outros lugares do país, ou até do mundo. tudo em tempo real, como se o outro estivesse lado a lado, de forma que esta categoria de jogos abre novas perspectivas de diversão. no entanto, atualmente alguns fatores dificultam sua disseminação o alto preço da conexão de banda larga e das mensalidades que muitos jogos exigem. também há de considerar que muitos deles exigem atualização constante do equipamento, elevando o custo da diversão.</desc>
+        <image>./downloaded_images/friv-image.png</image>
+        <genre>games</genre>
+    </game>
+    <game>
+        <path>./GAMEFAQS.txt</path>
+        <name>GAMES - GAMEFAQS</name>
+        <desc>gamefaqs é um website especializado em conteúdo relacionado a vídeo games, guias, imagens, faqs, códigos, análises, entre muitas outras informações. o gamefaqs começou em 5 de novembro de 1995 com jeff cjayc veasey e foi vendida para a cnet networks. nessa época, chamava-se video game faqs archive (arquivo de faqs de vídeo game), e era hospedado pela aol. originalmente servia como clone de um popular arquivo de faqs que existia na época. tem um dos maiores bancos de dados de vídeo games disponíveis na internet. o site possui uma vasta gama de sistemas(consoles), com quase qualquer título que já tenha sido lançado ou que esteja marcado para ser lançado. sem ser cadastrado, já se tem acesso aos incontáveis guias e informações, o prato principal do site.[1]além disso, ao registrar-se, o usuário pode contribuir com guias e informaçõeso, e pode, além disso, ter acesso ao fórum de mensagens (message board). desde 2003, o site tem sido subsidiado pela cnet.quase todo conteúdo da gamefaqs é contribuição de seus usuários. as informações são sempre revisadas antes de serem colocadas no site, privilegiando guias de melhor qualidade.o site também é notável pelos seus ativos fóruns de mensagens, pois há um fórum para cada jogo de seu banco de dados, além de vários outros fóruns sociais. dentre outros, contém fóruns separados por região, inclusive, há o do brasi</desc>
+        <image>./downloaded_images/GAMEFAQS-image.png</image>
+        <genre>jogos</genre>
+    </game>
+    <game>
+        <path>./Netflix.txt</path>
+        <name>MULTIMIDIA - NETFLIX</name>
+        <desc>netflix é uma provedora global de filmes e séries de televisão via streaming, atualmente com mais de 100 milhões de assinantes. fundada em 1997 nos estados unidos, a empresa surgiu como um serviço de entrega de dvd pelo correio. a expansão do streaming, disponível nos estados unidos a partir de 2007, começou pelo canadá em 2010. hoje, mais de 190 países têm acesso à plataforma. sua primeira websérie original de sucesso foi house of cards, lançada em 2013.[6]</desc>
+        <image>./downloaded_images/Netflix-image.png</image>
+        <genre>filmes e series</genre>
+    </game>
+    <game>
+        <path>./SPOTIFY.txt</path>
+        <name>MULTIMIDIA - SPOTIFY</name>
+        <desc>spotify é um serviço de streaming de música, podcast e vídeo que foi lançado oficialmente em 7 de outubro de 2008. é o serviço de streaming mais popular e usado do mundo. ele é desenvolvido pela startup spotify ab em estocolmo, suécia.[2] ele fornece conteúdo protegido de conteúdo provido de restrição de gestão de direitos digitais[3] de gravadoras e empresas de mídia. o spotify é um serviço freemium; com recursos básicos sendo gratuitos com propagandas ou limitações, enquanto recursos adicionais, como qualidade de transmissão aprimorada e downloads de música, são oferecidos para assinaturas pagas.[</desc>
+        <image>./downloaded_images/SPOTIFY-image.png</image>
+        <genre>musica</genre>
+    </game>
+    <game>
+        <path>./YOUTUBE.txt</path>
+        <name>MULTIMIDIA - YOUTUBE</name>
+        <desc>youtube é uma plataforma de compartilhamento de vídeos com sede em san bruno (califórnia). o serviço foi criado por três ex- funcionários do paypal - chad hurley, steve chen e jawed karim - em fevereiro de 2005. a google comprou o site em novembro de 2006 por us $ 1,65 bilhão; o youtube agora funciona como uma das subsidiárias da google.[2]</desc>
+        <image>./downloaded_images/YOUTUBE-image.png</image>
+        <genre>videos</genre>
+    </game>
+    <game>
+        <path>./TECHTUDO.txt</path>
+        <name>PORTAL - TECHTUDO</name>
+        <desc>techtudo é um site globo.com que tem com assunto principal a tecnologia,tratando de assuntos como jogos, celulares, softwares, eletrônicos, tv e internet. é considerado um dos melhores sites de tecnologia feito em português</desc>
+        <image>./downloaded_images/TECHTUDO-image.png</image>
+        <genre>tecnologia</genre>
+    </game>
+    <game>
+        <path>./TERRA.txt</path>
+        <name>PORTAL - TERRA</name>
+        <desc>terra é uma empresa brasileira de internet pertencente ao grupo espanhol telefónica, um dos maiores conglomerados de telecomunicações fixas e móveis do mundo.[2]lançado no brasil após aquisição do até então portal gaúcho de conteúdo zaz (ex-nutecnet), o terra foi escolhido pelo grupo telefónica como parte da estratégia de iniciar suas operações de internet na américa latina.[3]</desc>
+        <image>./downloaded_images/TERRA-image.png</image>
+        <genre>noticias</genre>
+    </game>
+    <game>
+        <path>./UOL.txt</path>
+        <name>PORTAL - UOL</name>
+        <desc>universo online, conhecido pela sigla uol, é uma empresa brasileira de conteúdo, produtos e serviços de internet do conglomerado grupo folha.[2]em 2017, foi considerado pela plataforma similarweb o sexto site mais visitado da internet no brasil, atrás dos sites do google (google brasil, google eua e youtube) e do facebook.[3]</desc>
+        <image>./downloaded_images/UOL-image.png</image>
+        <genre>noticias</genre>
+    </game>
+    <game>
+        <path>./GOOGLE.txt</path>
+        <name>SEARCH - GOOGLE</name>
+        <desc>o google começou em janeiro de 1996 como um projeto de pesquisa de larry page e sergey brin, quando ambos eram estudantes de doutorado na universidade stanford, na califórnia, estados unidos.[33]enquanto os motores de busca convencionais exibiam resultados classificados pela contagem de quantas vezes os termos de busca apareciam na primeira página, os dois teorizaram sobre um sistema melhor que analisava as relações entre os sites.[34] eles chamaram esta nova tecnologia pagerank, onde a relevância de um site era determinada pelo número de páginas, bem como pela importância dessas páginas, que ligavam de volta para o site original.[35][36]</desc>
+        <image>./downloaded_images/GOOGLE-image.png</image>
+        <genre>buscador</genre>
+    </game>
+    <game>
+        <path>./MSN.txt</path>
+        <name>SEARCH - MSN</name>
+        <desc>msn, originalmente the microsoft network, é um portal e uma rede de serviços oferecidos pela microsoft em suas estratégias envolvendo tecnologias de internet. o logotipo representa uma borboleta, que captura a imaginação e a liberdade.[2]o the microsoft network foi inicialmente concebido para ser uma grande bbs (ou serviço online) em 1994 para os usuários do windows 95. contrariando a grande tendência da época, bill gates afirmava que a internet era apenas uma moda passageira e que os grandes serviços online eram o futuro das conexões caseiras entre computadores pessoais, devido ao grande sucesso que era a america online e a compuserve. entretanto, a baixa demanda fez com que o msn - assim como os demais serviços online da época - se convertesse em uma provedora de acesso à internet distribuindo conteúdo exclusivo para os assinantes. a partir de 1997, o conteúdo começou a ser gradualmente aberto a todos os assinantes.</desc>
+        <image>./downloaded_images/MSN-image.png</image>
+        <genre>noticias</genre>
+    </game>
+    <game>
+        <path>./YAHOO.txt</path>
+        <name>SEARCH - YAHOO</name>
+        <desc>yahoo! é um portal web sediado em sunnyvale, califórnia que é uma subsidiária integral da verizon communications através da oath inc..[2][3] o yahoo foi fundado por jerry yang e david filo em janeiro de 1994 e foi incorporada em 2 de março de 1995.[4][5] a empresa foi uma das pioneiras nos primórdios da era da internet na década de 1990.[6] marissa mayer, uma ex-executiva da google, serviu como ceo e presidente do yahoo até junho 2017.[7]</desc>
+        <image>./downloaded_images/YAHOO-image.png</image>
+        <genre>noticias</genre>
+    </game>
+    <game>
+        <path>./INSTAGRAM.txt</path>
+        <name>SOCIAL - INSTAGRAM</name>
+        <desc>instagram é uma rede social online de compartilhamento de fotos e vídeos entre seus usuários, que permite aplicar filtros digitais e compartilhá-los em uma variedade de serviços de redes sociais, como facebook, twitter, tumblr e flickr.[6] originalmente, uma característica distintiva era a limitação das fotos para uma forma quadrada, semelhante ao kodak instamatic e de câmeras polaroid, em contraste com a relação a proporção de tela de 169 tipicamente usada por câmeras de dispositivos móveis. contudo, desde a versão 7.5, lançada em agosto de 2015, podem ser enviadas mídias em qualquer proporção. os vídeos foram permitidos na rede em junho de 2013, com um limite de 15 segundos e uma resolução fixa de 640x640; desde julho de 2015, permite-se o envio de vídeos em 1080p, e pode-se também publicar gravações de até 60 segundos, desde janeiro de 2016.[7]</desc>
+        <image>./downloaded_images/INSTAGRAM-image.png</image>
+        <genre>rede social</genre>
+    </game>
+    <game>
+        <path>./LINKEDIN.txt</path>
+        <name>SOCIAL - LINKEDIN</name>
+        <desc>linkedin é uma rede social de negócios fundada em dezembro de 2002 e lançada em 5 de maio de 2003.[2] é comparável a redes de relacionamentos, e é principalmente utilizada por profissionais com o intuito de apresentar suas aptidões, de uma forma que outros profissionais da mesma empresa possam endossar, dando credibilidade ao conteúdo.</desc>
+        <image>./downloaded_images/LINKEDIN-image.png</image>
+        <genre>rede social</genre>
+    </game>
+    <game>
+        <path>./OUTLOOK.txt</path>
+        <name>SOCIAL - OUTLOOK</name>
+        <desc>site de email hotmail micosoft</desc>
+        <image>./downloaded_images/OUTLOOK-image.png</image>
+        <genre>email</genre>
+    </game>
+    <game>
+        <path>./TWITTER.txt</path>
+        <name>SOCIAL - TWITTER</name>
+        <desc>é uma rede social e um servidor para microblogging, que permite aos usuários enviar e receber atualizações pessoais de outros contatos (em textos de até 280 caracteres, conhecidos como tweets), por meio do website do serviço, por sms e por softwares específicos de gerenciamento</desc>
+        <image>./downloaded_images/TWITTER-image.png</image>
+        <genre>rede social</genre>
+    </game>
+    <game>
+        <path>./WIKIPÉDIA.txt</path>
+        <name>SOCIAL - WIKIPÉDIA</name>
+        <desc>a wikipédia é um projeto de enciclopédia multilíngue de licença livre, baseado na web e ... em português, o prefixo wiki é somado ao sufixo de enciclopédia, ganhando acento diacrítico agudo no e, para atender à gramática lusófona.</desc>
+        <image>./downloaded_images/WIKIPÉDIA-image.png</image>
+        <genre>informações</genre>
+    </game>
+</gameList>
