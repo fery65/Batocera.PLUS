@@ -1,0 +1,35 @@
+#!/bin/sh
+### WINE
+### Batocera.PLUS
+### Alexandre Freire dos Santos
+### Email: alexxandre.freire@gmail.com
+
+# https://wiki.archlinux.org/index.php/Wine
+# https://wiki.winehq.org/Wine_User%27s_Guide
+# https://wiki.winehq.org/FAQ
+
+export PATH="/opt/wine-staging/bin:${PATH:+:$PATH}"
+
+export LD_LIBRARY_PATH="/opt/wine-staging/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="/opt/wine-staging/lib64:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="/lib32:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="/usr/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
+export LIBGL_DRIVERS_PATH="/lib32/dri:${LIBGL_DRIVERS_PATH:+:$LIBGL_DRIVERS_PATH}"
+
+export FONTCONFIG_PATH="/etc/fonts:${FONTCONFIG_PATH:+:$FONTCONFIG_PATH}"
+
+export PYTHONPATH="/usr/lib/python2.7:${PYTHONPATH:+:$PYTHONPATH}"
+export PERLLIB="/usr/share/perl5/:${PERLLIB:+:$PERLLIB}"
+
+export XDG_DATA_DIRS="/usr/share/:${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
+
+export GSETTINGS_SCHEMA_DIR="/wine-staging/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
+export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
+
+export WINEPREFIX=/userdata/saves/pcgames/wine
+
+export WINEDLLOVERRIDES='mscoree=d;mshtml=d'
+
+exec '/opt/wine-staging/bin/wine' "$@"
