@@ -1,0 +1,48 @@
+; File generated automatically from dlls/d3d11/d3d11.spec; do not edit!
+
+LIBRARY d3d11.dll
+
+EXPORTS
+  D3D11CoreCreateDevice @1
+  D3D11CoreCreateLayeredDevice @2 PRIVATE
+  D3D11CoreGetLayeredDeviceSize @3 PRIVATE
+  D3D11CoreRegisterLayers @4
+  D3D11CreateDevice @5
+  D3D11CreateDeviceAndSwapChain @6
+  D3D11On12CreateDevice @7
+  D3DKMTCloseAdapter @8 PRIVATE
+  D3DKMTCreateAllocation @9 PRIVATE
+  D3DKMTCreateContext @10 PRIVATE
+  D3DKMTCreateDevice @11 PRIVATE
+  D3DKMTCreateSynchronizationObject @12 PRIVATE
+  D3DKMTDestroyAllocation @13 PRIVATE
+  D3DKMTDestroyContext @14 PRIVATE
+  D3DKMTDestroyDevice @15 PRIVATE
+  D3DKMTDestroySynchronizationObject @16 PRIVATE
+  D3DKMTEscape @17 PRIVATE
+  D3DKMTGetContextSchedulingPriority @18 PRIVATE
+  D3DKMTGetDeviceState @19 PRIVATE
+  D3DKMTGetDisplayModeList @20 PRIVATE
+  D3DKMTGetMultisampleMethodList @21 PRIVATE
+  D3DKMTGetRuntimeData @22 PRIVATE
+  D3DKMTGetSharedPrimaryHandle @23 PRIVATE
+  D3DKMTLock @24 PRIVATE
+  D3DKMTOpenAdapterFromHdc @25 PRIVATE
+  D3DKMTOpenResource @26 PRIVATE
+  D3DKMTPresent @27 PRIVATE
+  D3DKMTQueryAdapterInfo @28 PRIVATE
+  D3DKMTQueryAllocationResidency @29 PRIVATE
+  D3DKMTQueryResourceInfo @30 PRIVATE
+  D3DKMTRender @31 PRIVATE
+  D3DKMTSetAllocationPriority @32 PRIVATE
+  D3DKMTSetContextSchedulingPriority @33 PRIVATE
+  D3DKMTSetDisplayMode @34 PRIVATE
+  D3DKMTSetDisplayPrivateDriverFormat @35 PRIVATE
+  D3DKMTSetGammaRamp @36 PRIVATE
+  D3DKMTSetVidPnSourceOwner @37 PRIVATE
+  D3DKMTSignalSynchronizationObject @38 PRIVATE
+  D3DKMTUnlock @39 PRIVATE
+  D3DKMTWaitForSynchronizationObject @40 PRIVATE
+  D3DKMTWaitForVerticalBlankEvent @41 PRIVATE
+  OpenAdapter10 @42 PRIVATE
+  OpenAdapter10_2 @43 PRIVATE
