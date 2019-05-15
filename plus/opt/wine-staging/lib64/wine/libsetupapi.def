@@ -247,9 +247,9 @@ EXPORTS
   SearchForInfFile @242 PRIVATE
   SetArrayToMultiSzValue @243 PRIVATE
   SetupAddInstallSectionToDiskSpaceListA @244
-  SetupAddInstallSectionToDiskSpaceListW @245
-  SetupAddSectionToDiskSpaceListA @246
-  SetupAddSectionToDiskSpaceListW @247
+  SetupAddInstallSectionToDiskSpaceListW @245 PRIVATE
+  SetupAddSectionToDiskSpaceListA @246 PRIVATE
+  SetupAddSectionToDiskSpaceListW @247 PRIVATE
   SetupAddToDiskSpaceListA @248
   SetupAddToDiskSpaceListW @249
   SetupAddToSourceListA @250

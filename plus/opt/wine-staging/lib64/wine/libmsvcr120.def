@@ -1707,9 +1707,9 @@ EXPORTS
   log2=MSVCR120_log2 @1702
   log2f=MSVCR120_log2f @1703
   log2l=MSVCR120_log2l @1704
-  logb @1705 PRIVATE
-  logbf @1706 PRIVATE
-  logbl @1707 PRIVATE
+  logb=MSVCRT__logb @1705
+  logbf=MSVCRT__logbf @1706
+  logbl=MSVCRT__logb @1707
   longjmp=MSVCRT_longjmp @1708
   lrint=MSVCR120_lrint @1709
   lrintf=MSVCR120_lrintf @1710

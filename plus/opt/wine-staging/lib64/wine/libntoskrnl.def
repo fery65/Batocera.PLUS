@@ -9,26 +9,26 @@ EXPORTS
   ExInitializeRundownProtection @4 PRIVATE
   ExInterlockedAddLargeStatistic @5 PRIVATE
   ExInterlockedCompareExchange64 @6 PRIVATE
-  ExInterlockedFlushSList @7 PRIVATE
-  ExReInitializeRundownProtection @8 PRIVATE
-  ExReleaseFastMutexUnsafe @9
-  ExReleaseResourceLite @10
-  ExReleaseRundownProtection @11 PRIVATE
-  ExReleaseRundownProtectionEx @12 PRIVATE
-  ExRundownCompleted @13 PRIVATE
-  ExWaitForRundownProtectionRelease @14 PRIVATE
-  ExfAcquirePushLockExclusive @15 PRIVATE
-  ExfAcquirePushLockShared @16 PRIVATE
-  ExfInterlockedAddUlong @17 PRIVATE
-  ExfInterlockedCompareExchange64 @18 PRIVATE
-  ExfInterlockedInsertHeadList @19 PRIVATE
-  ExfInterlockedInsertTailList @20 PRIVATE
-  ExfInterlockedPopEntryList @21 PRIVATE
-  ExfInterlockedPushEntryList @22 PRIVATE
-  ExfReleasePushLock @23 PRIVATE
-  Exfi386InterlockedDecrementLong @24 PRIVATE
-  Exfi386InterlockedExchangeUlong @25 PRIVATE
-  Exfi386InterlockedIncrementLong @26 PRIVATE
+  ExReInitializeRundownProtection @7 PRIVATE
+  ExReleaseFastMutexUnsafe @8
+  ExReleaseResourceLite @9
+  ExReleaseRundownProtection @10 PRIVATE
+  ExReleaseRundownProtectionEx @11 PRIVATE
+  ExRundownCompleted @12 PRIVATE
+  ExWaitForRundownProtectionRelease @13 PRIVATE
+  ExfAcquirePushLockExclusive @14 PRIVATE
+  ExfAcquirePushLockShared @15 PRIVATE
+  ExfInterlockedAddUlong @16 PRIVATE
+  ExfInterlockedCompareExchange64 @17 PRIVATE
+  ExfInterlockedInsertHeadList @18 PRIVATE
+  ExfInterlockedInsertTailList @19 PRIVATE
+  ExfInterlockedPopEntryList @20 PRIVATE
+  ExfInterlockedPushEntryList @21 PRIVATE
+  ExfReleasePushLock @22 PRIVATE
+  Exfi386InterlockedDecrementLong @23 PRIVATE
+  Exfi386InterlockedExchangeUlong @24 PRIVATE
+  Exfi386InterlockedIncrementLong @25 PRIVATE
+  ExpInterlockedFlushSList=RtlInterlockedFlushSList @26
   ExpInterlockedPopEntrySList=RtlInterlockedPopEntrySList @27
   ExpInterlockedPushEntrySList=RtlInterlockedPushEntrySList @28
   HalExamineMBR @29 PRIVATE
@@ -387,7 +387,7 @@ EXPORTS
   IoGetBootDiskInformation @382 PRIVATE
   IoGetConfigurationInformation @383
   IoGetCurrentProcess @384
-  IoGetDeviceAttachmentBaseRef @385
+  IoGetDeviceAttachmentBaseRef @385 PRIVATE
   IoGetDeviceInterfaceAlias @386 PRIVATE
   IoGetDeviceInterfaces @387
   IoGetDeviceObjectPointer @388
@@ -700,7 +700,7 @@ EXPORTS
   MmLockPagableImageSection @695 PRIVATE
   MmLockPagableSectionByHandle @696
   MmMapIoSpace @697
-  MmMapLockedPages @698
+  MmMapLockedPages @698 PRIVATE
   MmMapLockedPagesSpecifyCache @699
   MmMapLockedPagesWithReservedMapping @700 PRIVATE
   MmMapMemoryDumpMdl @701 PRIVATE
@@ -911,7 +911,7 @@ EXPORTS
   PsJobType @906 PRIVATE
   PsLookupProcessByProcessId @907
   PsLookupProcessThreadByCid @908 PRIVATE
-  PsLookupThreadByThreadId @909 PRIVATE
+  PsLookupThreadByThreadId @909
   PsProcessType @910 DATA
   PsReferenceImpersonationToken @911 PRIVATE
   PsReferencePrimaryToken @912 PRIVATE

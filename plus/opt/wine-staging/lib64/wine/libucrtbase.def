@@ -2337,9 +2337,9 @@ EXPORTS
   log2=MSVCR120_log2 @2332
   log2f=MSVCR120_log2f @2333
   log2l=MSVCR120_log2l @2334
-  logb @2335 PRIVATE
-  logbf @2336 PRIVATE
-  logbl @2337 PRIVATE
+  logb=MSVCRT__logb @2335
+  logbf=MSVCRT__logbf @2336
+  logbl=MSVCRT__logb @2337
   logf=MSVCRT_logf @2338
   longjmp=MSVCRT_longjmp @2339
   lrint=MSVCR120_lrint @2340

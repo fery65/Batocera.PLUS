@@ -6,59 +6,54 @@ EXPORTS
   HttpAddFragmentToCache @1 PRIVATE
   HttpAddUrl @2
   HttpAddUrlToConfigGroup @3 PRIVATE
-  HttpAddUrlToUrlGroup @4
-  HttpCancelHttpRequest @5 PRIVATE
-  HttpCreateAppPool @6 PRIVATE
-  HttpCreateConfigGroup @7 PRIVATE
-  HttpCreateFilter @8 PRIVATE
-  HttpCreateHttpHandle @9
-  HttpCreateServerSession @10
-  HttpCreateRequestQueue @11
-  HttpCreateUrlGroup @12
-  HttpCloseUrlGroup @13
-  HttpCloseServerSession @14
-  HttpDeleteConfigGroup @15 PRIVATE
-  HttpDeleteServiceConfiguration @16
-  HttpFilterAccept @17 PRIVATE
-  HttpFilterAppRead @18 PRIVATE
-  HttpFilterAppWrite @19 PRIVATE
-  HttpFilterAppWriteAndRawRead @20 PRIVATE
-  HttpFilterClose @21 PRIVATE
-  HttpFilterRawRead @22 PRIVATE
-  HttpFilterRawWrite @23 PRIVATE
-  HttpFilterRawWriteAndAppRead @24 PRIVATE
-  HttpFlushResponseCache @25 PRIVATE
-  HttpGetCounters @26 PRIVATE
-  HttpInitialize @27
-  HttpInitializeServerContext @28 PRIVATE
-  HttpOpenAppPool @29 PRIVATE
-  HttpOpenControlChannel @30 PRIVATE
-  HttpOpenFilter @31 PRIVATE
-  HttpQueryAppPoolInformation @32 PRIVATE
-  HttpQueryConfigGroupInformation @33 PRIVATE
-  HttpQueryControlChannelInformation @34 PRIVATE
-  HttpQueryServerContextInformation @35 PRIVATE
-  HttpQueryServiceConfiguration @36
-  HttpReadFragmentFromCache @37 PRIVATE
-  HttpReceiveClientCertificate @38 PRIVATE
-  HttpReceiveHttpRequest @39 PRIVATE
-  HttpReceiveHttpResponse @40 PRIVATE
-  HttpReceiveRequestEntityBody @41 PRIVATE
-  HttpRemoveAllUrlsFromConfigGroup @42 PRIVATE
-  HttpRemoveUrl @43 PRIVATE
-  HttpRemoveUrlFromConfigGroup @44 PRIVATE
-  HttpSendHttpRequest @45 PRIVATE
-  HttpSendHttpResponse @46 PRIVATE
-  HttpSendRequestEntityBody @47 PRIVATE
-  HttpSendResponseEntityBody @48 PRIVATE
-  HttpSetAppPoolInformation @49 PRIVATE
-  HttpSetConfigGroupInformation @50 PRIVATE
-  HttpSetControlChannelInformation @51 PRIVATE
-  HttpSetServerContextInformation @52 PRIVATE
-  HttpSetServiceConfiguration @53
-  HttpSetUrlGroupProperty @54
-  HttpShutdownAppPool @55 PRIVATE
-  HttpShutdownFilter @56 PRIVATE
-  HttpTerminate @57
-  HttpWaitForDemandStart @58 PRIVATE
-  HttpWaitForDisconnect @59 PRIVATE
+  HttpCancelHttpRequest @4 PRIVATE
+  HttpCreateAppPool @5 PRIVATE
+  HttpCreateConfigGroup @6 PRIVATE
+  HttpCreateFilter @7 PRIVATE
+  HttpCreateHttpHandle @8
+  HttpCreateServerSession @9
+  HttpCloseServerSession @10
+  HttpDeleteConfigGroup @11 PRIVATE
+  HttpDeleteServiceConfiguration @12
+  HttpFilterAccept @13 PRIVATE
+  HttpFilterAppRead @14 PRIVATE
+  HttpFilterAppWrite @15 PRIVATE
+  HttpFilterAppWriteAndRawRead @16 PRIVATE
+  HttpFilterClose @17 PRIVATE
+  HttpFilterRawRead @18 PRIVATE
+  HttpFilterRawWrite @19 PRIVATE
+  HttpFilterRawWriteAndAppRead @20 PRIVATE
+  HttpFlushResponseCache @21 PRIVATE
+  HttpGetCounters @22 PRIVATE
+  HttpInitialize @23
+  HttpInitializeServerContext @24 PRIVATE
+  HttpOpenAppPool @25 PRIVATE
+  HttpOpenControlChannel @26 PRIVATE
+  HttpOpenFilter @27 PRIVATE
+  HttpQueryAppPoolInformation @28 PRIVATE
+  HttpQueryConfigGroupInformation @29 PRIVATE
+  HttpQueryControlChannelInformation @30 PRIVATE
+  HttpQueryServerContextInformation @31 PRIVATE
+  HttpQueryServiceConfiguration @32
+  HttpReadFragmentFromCache @33 PRIVATE
+  HttpReceiveClientCertificate @34 PRIVATE
+  HttpReceiveHttpRequest @35 PRIVATE
+  HttpReceiveHttpResponse @36 PRIVATE
+  HttpReceiveRequestEntityBody @37 PRIVATE
+  HttpRemoveAllUrlsFromConfigGroup @38 PRIVATE
+  HttpRemoveUrl @39 PRIVATE
+  HttpRemoveUrlFromConfigGroup @40 PRIVATE
+  HttpSendHttpRequest @41 PRIVATE
+  HttpSendHttpResponse @42 PRIVATE
+  HttpSendRequestEntityBody @43 PRIVATE
+  HttpSendResponseEntityBody @44 PRIVATE
+  HttpSetAppPoolInformation @45 PRIVATE
+  HttpSetConfigGroupInformation @46 PRIVATE
+  HttpSetControlChannelInformation @47 PRIVATE
+  HttpSetServerContextInformation @48 PRIVATE
+  HttpSetServiceConfiguration @49
+  HttpShutdownAppPool @50 PRIVATE
+  HttpShutdownFilter @51 PRIVATE
+  HttpTerminate @52
+  HttpWaitForDemandStart @53 PRIVATE
+  HttpWaitForDisconnect @54 PRIVATE
