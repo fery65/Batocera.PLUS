@@ -1,0 +1,166 @@
+; File generated automatically from dlls/iphlpapi/iphlpapi.spec; do not edit!
+
+LIBRARY iphlpapi.dll
+
+EXPORTS
+  AddIPAddress @1
+  AllocateAndGetArpEntTableFromStack @2 PRIVATE
+  AllocateAndGetIfTableFromStack @3
+  AllocateAndGetIpAddrTableFromStack @4
+  AllocateAndGetIpForwardTableFromStack @5
+  AllocateAndGetIpNetTableFromStack @6
+  AllocateAndGetTcpTableFromStack @7
+  AllocateAndGetUdpTableFromStack @8
+  CancelIPChangeNotify @9
+  CancelMibChangeNotify2 @10
+  ConvertInterfaceGuidToLuid @11
+  ConvertInterfaceIndexToLuid @12
+  ConvertInterfaceLuidToGuid @13
+  ConvertInterfaceLuidToIndex @14
+  ConvertInterfaceLuidToNameA @15
+  ConvertInterfaceLuidToNameW @16
+  ConvertInterfaceNameToLuidA @17
+  ConvertInterfaceNameToLuidW @18
+  ConvertLengthToIpv4Mask @19
+  CreateIpForwardEntry @20
+  CreateIpNetEntry @21
+  CreateProxyArpEntry @22
+  CreateSortedAddressPairs @23
+  DeleteIPAddress @24
+  DeleteIpForwardEntry @25
+  DeleteIpNetEntry @26
+  DeleteProxyArpEntry @27
+  EnableRouter @28
+  FlushIpNetTable @29
+  FlushIpNetTableFromStack @30 PRIVATE
+  FreeMibTable @31
+  GetAdapterIndex @32
+  GetAdapterOrderMap @33 PRIVATE
+  GetAdaptersAddresses @34
+  GetAdaptersInfo @35
+  GetBestInterface @36
+  GetBestInterfaceEx @37
+  GetBestInterfaceFromStack @38 PRIVATE
+  GetBestRoute @39
+  GetBestRouteFromStack @40 PRIVATE
+  GetExtendedTcpTable @41
+  GetExtendedUdpTable @42
+  GetFriendlyIfIndex @43
+  GetIcmpStatisticsEx @44
+  GetIcmpStatistics @45
+  GetIcmpStatsFromStack @46 PRIVATE
+  GetIfEntry @47
+  GetIfEntry2 @48
+  GetIfEntryFromStack @49 PRIVATE
+  GetIfTable @50
+  GetIfTable2 @51
+  GetIfTable2Ex @52
+  GetIfTableFromStack @53 PRIVATE
+  GetIgmpList @54 PRIVATE
+  GetInterfaceInfo @55
+  GetIpAddrTable @56
+  GetIpAddrTableFromStack @57 PRIVATE
+  GetIpForwardTable @58
+  GetIpForwardTable2 @59
+  GetIpForwardTableFromStack @60 PRIVATE
+  GetIpInterfaceTable @61
+  GetIpNetTable @62
+  GetIpNetTable2 @63
+  GetIpNetTableFromStack @64 PRIVATE
+  GetIpStatisticsEx @65
+  GetIpStatistics @66
+  GetIpStatsFromStack @67 PRIVATE
+  GetNetworkParams @68
+  GetNumberOfInterfaces @69
+  GetPerAdapterInfo @70
+  GetRTTAndHopCount @71
+  GetTcp6Table @72
+  GetTcp6Table2 @73
+  GetTcpStatisticsEx @74
+  GetTcpStatistics @75
+  GetTcpStatsFromStack @76 PRIVATE
+  GetTcpTable @77
+  GetTcpTable2 @78
+  GetTcpTableFromStack @79 PRIVATE
+  GetUdp6Table @80
+  GetUdpStatisticsEx @81
+  GetUdpStatistics @82
+  GetUdpStatsFromStack @83 PRIVATE
+  GetUdpTable @84
+  GetUdpTableFromStack @85 PRIVATE
+  GetUnicastIpAddressEntry @86
+  GetUnicastIpAddressTable @87
+  GetUniDirectionalAdapterInfo @88
+  Icmp6CreateFile @89
+  Icmp6SendEcho2 @90
+  IcmpCloseHandle @91
+  IcmpCreateFile @92
+  IcmpParseReplies @93 PRIVATE
+  IcmpSendEcho2Ex @94
+  IcmpSendEcho2 @95
+  IcmpSendEcho @96
+  if_indextoname=IPHLP_if_indextoname @97
+  if_nametoindex=IPHLP_if_nametoindex @98
+  InternalCreateIpForwardEntry @99 PRIVATE
+  InternalCreateIpNetEntry @100 PRIVATE
+  InternalDeleteIpForwardEntry @101 PRIVATE
+  InternalDeleteIpNetEntry @102 PRIVATE
+  InternalGetIfTable @103 PRIVATE
+  InternalGetIpAddrTable @104 PRIVATE
+  InternalGetIpForwardTable @105 PRIVATE
+  InternalGetIpNetTable @106 PRIVATE
+  InternalGetTcpTable @107 PRIVATE
+  InternalGetUdpTable @108 PRIVATE
+  InternalSetIfEntry @109 PRIVATE
+  InternalSetIpForwardEntry @110 PRIVATE
+  InternalSetIpNetEntry @111 PRIVATE
+  InternalSetIpStats @112 PRIVATE
+  InternalSetTcpEntry @113 PRIVATE
+  IpReleaseAddress @114
+  IpRenewAddress @115
+  IsLocalAddress @116 PRIVATE
+  NhGetGuidFromInterfaceName @117 PRIVATE
+  NhGetInterfaceNameFromGuid @118 PRIVATE
+  NhpAllocateAndGetInterfaceInfoFromStack @119 PRIVATE
+  NhpGetInterfaceIndexFromStack @120 PRIVATE
+  NotifyAddrChange @121
+  NotifyIpInterfaceChange @122
+  NotifyRouteChange @123
+  NotifyRouteChangeEx @124 PRIVATE
+  NotifyUnicastIpAddressChange @125
+  _PfAddFiltersToInterface@24 @126 PRIVATE
+  _PfAddGlobalFilterToInterface@8 @127 PRIVATE
+  _PfBindInterfaceToIPAddress@12=PfBindInterfaceToIPAddress @128
+  _PfBindInterfaceToIndex@16 @129 PRIVATE
+  _PfCreateInterface@24=PfCreateInterface @130
+  _PfDeleteInterface@4=PfDeleteInterface @131
+  _PfDeleteLog@0 @132 PRIVATE
+  _PfGetInterfaceStatistics@16 @133 PRIVATE
+  _PfMakeLog@4 @134 PRIVATE
+  _PfRebindFilters@8 @135 PRIVATE
+  _PfRemoveFilterHandles@12 @136 PRIVATE
+  _PfRemoveFiltersFromInterface@20 @137 PRIVATE
+  _PfRemoveGlobalFilterFromInterface@8 @138 PRIVATE
+  _PfSetLogBuffer@28 @139 PRIVATE
+  _PfTestPacket@20 @140 PRIVATE
+  _PfUnBindInterface@4=PfUnBindInterface @141
+  SendARP @142
+  SetAdapterIpAddress @143 PRIVATE
+  SetBlockRoutes @144 PRIVATE
+  SetIfEntry @145
+  SetIfEntryToStack @146 PRIVATE
+  SetIpForwardEntry @147
+  SetIpForwardEntryToStack @148 PRIVATE
+  SetIpMultihopRouteEntryToStack @149 PRIVATE
+  SetIpNetEntry @150
+  SetIpNetEntryToStack @151 PRIVATE
+  SetIpRouteEntryToStack @152 PRIVATE
+  SetIpStatistics @153
+  SetIpStatsToStack @154 PRIVATE
+  SetIpTTL @155
+  SetPerTcpConnectionEStats @156
+  SetProxyArpEntryToStack @157 PRIVATE
+  SetRouteWithRef @158 PRIVATE
+  SetTcpEntry @159
+  SetTcpEntryToStack @160 PRIVATE
+  UnenableRouter @161

@@ -4,32 +4,70 @@
 ### Alexandre Freire dos Santos
 ### Email: alexxandre.freire@gmail.com
 
-# https://wiki.archlinux.org/index.php/Wine
-# https://wiki.winehq.org/Wine_User%27s_Guide
-# https://wiki.winehq.org/FAQ
+################################################################################
 
-export PATH="/opt/wine-staging/bin:${PATH:+:$PATH}"
+### Configura o local do save
 
-export LD_LIBRARY_PATH="/opt/wine-staging/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-export LD_LIBRARY_PATH="/opt/wine-staging/lib64:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-export LD_LIBRARY_PATH="/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+mkdir -p          /userdata/saves/pcgames/wine32
+export WINEPREFIX=/userdata/saves/pcgames/wine32
+
+################################################################################
+
+ln -sf /opt/Wine/lib32/wine /usr/lib
+
+export LD_LIBRARY_PATH="/opt/Wine/lib32:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 export LD_LIBRARY_PATH="/lib32:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-export LD_LIBRARY_PATH="/usr/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-
 export LIBGL_DRIVERS_PATH="/lib32/dri:${LIBGL_DRIVERS_PATH:+:$LIBGL_DRIVERS_PATH}"
-
-export FONTCONFIG_PATH="/etc/fonts:${FONTCONFIG_PATH:+:$FONTCONFIG_PATH}"
 
 export PYTHONPATH="/usr/lib/python2.7:${PYTHONPATH:+:$PYTHONPATH}"
 export PERLLIB="/usr/share/perl5/:${PERLLIB:+:$PERLLIB}"
 
-export XDG_DATA_DIRS="/usr/share/:${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
+################################################################################
 
-export GSETTINGS_SCHEMA_DIR="/wine-staging/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
-export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
-
-export WINEPREFIX=/userdata/saves/pcgames/wine
+### Desativa a instalação automática do mono e do gecko.
+### Pode ser instalada manualmente depois para os jogos / programas que necessitam.
 
 export WINEDLLOVERRIDES='mscoree=d;mshtml=d'
 
-exec '/opt/wine-staging/bin/wine' "$@"
+################################################################################
+
+### Resolve o bug do wine não aceitar comandos do teclado
+### Resolve o bug dos programas não rodarem em janela
+
+if ! [ -f '/userdata/saves/pcgames/wine32/user.reg' ]; then
+    /opt/Wine/bin32/wine wineboot
+    
+    # Aguarda o wine criar uma configuração inicial básica
+    for (( i = 0; i <= 60; i++ )); do
+        if [ -f '/userdata/saves/pcgames/wine32/user.reg' ]; then
+            break
+        else
+            sleep 1
+        fi
+    done
+
+    echo ''                             >> '/userdata/saves/pcgames/wine32/user.reg'
+    echo '[Software\\Wine\\X11 Driver]' >> '/userdata/saves/pcgames/wine32/user.reg'
+    echo '"Managed"="N"'                >> '/userdata/saves/pcgames/wine32/user.reg'
+fi
+
+################################################################################
+
+### Executa o Wine
+
+exec '/opt/Wine/bin32/wine' "$@"
+
+################################################################################
+
+# REFULGO
+#export PATH="/opt/Wine/bin32:${PATH:+:$PATH}"
+#export FONTCONFIG_PATH="/etc/fonts:${FONTCONFIG_PATH:+:$FONTCONFIG_PATH}"
+#export XDG_DATA_DIRS="/usr/share/:${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
+#export GSETTINGS_SCHEMA_DIR="/wine-staging/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
+#export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
+
+# https://wiki.archlinux.org/index.php/Wine
+# https://wiki.winehq.org/Wine_User%27s_Guide
+# https://wiki.winehq.org/FAQ
+
+
