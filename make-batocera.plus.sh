@@ -3,7 +3,7 @@
 exit 0
 
 # Versão do Batocera.PLUS.
-VERSION='3.70'
+VERSION='3.80'
 
 # Pasta temporária em uma partição Linux.
 #TEMP_DIR='tmp'
@@ -21,6 +21,12 @@ BOOT_DIR='boot'
 
 echo 'Descompactando Batocera oficial...'
 mkdir -p "$TEMP_DIR"
+
+if ! [ -f "$IMG_OFICIAL" ]; then
+    echo "A imagem $IMG_OFICIAL não foi encontrada!"
+    exit $?
+fi
+
 gunzip -k "$IMG_OFICIAL" -c > "$TEMP_DIR/Batocera.PLUS.img" || exit $?
 
 echo 'Adicionando imagem oficial do batocera.linux ao disposivo loop...'
@@ -88,6 +94,18 @@ sed -i s'/^create mask = 0600/create mask = 0700/' "$TEMP_DIR/squashfs-root/etc/
 
 echo 'Copiando arquivos do batocera.plus...'
 cp -r -f "$PLUS_DIR/"* "$TEMP_DIR/squashfs-root"  || exit $?
+
+echo 'Descompactando Libretro mame...'
+7zr x -aoa "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro"  || exit $?
+rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame_libretro.so.7z."*
+
+echo 'Descompactando Libretro mame0200...'
+7zr x "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro" || exit $?
+rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z."*
+
+echo 'Descompactando Firefox libxul.so...'
+7zr x "$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr/libxul.so.7z" -o"$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr" || exit $?
+rm -f "$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr/libxul.so.7z"
 
 echo 'Compactando arquivo squashfs...'
 mksquashfs "$TEMP_DIR/squashfs-root/"* "$TEMP_DIR/batocera" || exit $?
