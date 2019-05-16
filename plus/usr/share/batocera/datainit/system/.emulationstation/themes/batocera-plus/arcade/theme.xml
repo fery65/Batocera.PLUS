@@ -39,6 +39,7 @@
 
 		<image name="background" extra="true">
 			<path>./../main/background2.png</path>
+
 		</image>		
 	</view>	
 </theme>

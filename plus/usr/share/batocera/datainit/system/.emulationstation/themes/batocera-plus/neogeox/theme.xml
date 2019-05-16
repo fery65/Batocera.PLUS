@@ -5,7 +5,7 @@
 
 	<view name="system">	
 		<image name="logo">
-			<path>./art/logo.svg</path>
+			<path>./art/logo.png</path>
 		</image>
 		<image name="background" extra="true">
 			<path>./../main/background.png</path>
@@ -19,7 +19,7 @@
 		<image name="game" extra="true">
 			<path>./art/game.svg</path>
 			<pos>0.25 0.30</pos>
-			<maxSize>0.16 0.16</maxSize>
+			<maxSize>0.20 0.25</maxSize>
 			<origin>0 1</origin>
 		</image>
 		<image name="controller" extra="true">
@@ -32,7 +32,7 @@
 
 	<view name="basic, detailed">	
 		<image name="logo">
-			<path>./art/logo.svg</path>
+			<path>./art/logo.png</path>
 		</image>
 
 		<image name="background" extra="true">

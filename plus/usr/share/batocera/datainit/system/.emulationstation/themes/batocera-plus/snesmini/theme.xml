@@ -3,7 +3,7 @@
 	<include>./../main.xml</include>	
 	<include>./custom.xml</include>
 
-	<view name="system">	
+	<view name="system">
 		<image name="logo">
 			<path>./art/logo.svg</path>
 		</image>
@@ -16,19 +16,13 @@
 			<maxSize>0.12 0.25</maxSize>
 			<origin>0 1</origin>
 		</image>
-		<image name="game" extra="true">
-			<path>./art/game.svg</path>
-			<pos>0.16 0.30</pos>
-			<maxSize>0.15 0.10</maxSize>
-			<origin>0 1</origin>
-		</image>
 		<image name="controller" extra="true">
 			<path>./art/controller.svg</path>
 			<pos>0.78 0.30</pos>
 			<maxSize>0.15 0.25</maxSize>
 			<origin>1 1</origin>
 		</image>
-	</view>	
+	</view>
 
 	<view name="basic, detailed">	
 		<image name="logo">
@@ -37,6 +31,6 @@
 
 		<image name="background" extra="true">
 			<path>./../main/background2.png</path>
-		</image>		
-	</view>	
+		</image>
+	</view>
 </theme>
