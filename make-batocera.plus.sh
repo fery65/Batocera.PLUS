@@ -8,6 +8,7 @@ VERSION='3.80'
 # Pasta temporária em uma partição Linux.
 #TEMP_DIR='tmp'
 TEMP_DIR='/media/NO_LABEL/tmp'
+#TEMP_DIR='/media/NO_LABEL_1/tmp'
 
 # Imagem oficial do batocera.linux.
 IMG_OFICIAL='img/batocera-5.21-x86_64-20190326.img.gz'

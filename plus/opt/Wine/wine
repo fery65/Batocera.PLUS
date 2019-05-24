@@ -1,0 +1,109 @@
+#!/bin/sh
+### WINE
+### Batocera.PLUS
+### Alexandre Freire dos Santos
+### Email: alexxandre.freire@gmail.com
+
+################################################################################
+
+WINE_DIR='/opt/Wine'
+SAVE_DIR='/userdata/saves/pcgames/Wine'
+ROM_DIR='/userdata/roms/pcgames'
+
+################################################################################
+
+### Define a arquitetura do executável e as bliotecas do sistema a serem usadas.
+
+WINE_ARCH="$(basename "$0")"
+
+if [ "$WINE_ARCH" == 'wine' ]; then
+    WINE_ARCH='32'
+    #ln -sf "${WINE_DIR}/wine32/lib/wine" /usr/lib
+    export LD_LIBRARY_PATH="/lib32:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    export LD_LIBRARY_PATH="${WINE_DIR}/wine32/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    export LIBGL_DRIVERS_PATH="/lib32/dri:${LIBGL_DRIVERS_PATH:+:$LIBGL_DRIVERS_PATH}"
+elif [ "$WINE_ARCH" == 'wine64' ]; then
+    WINE_ARCH='64'
+    #ln -sf "${WINE_DIR}/wine64/lib/wine" /usr/lib
+    export LD_LIBRARY_PATH="${WINE_DIR}/wine64/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+fi
+
+export PYTHONPATH="/usr/lib/python2.7:${PYTHONPATH:+:$PYTHONPATH}"
+export PERLLIB="/usr/share/perl5/:${PERLLIB:+:$PERLLIB}"
+
+################################################################################
+
+### Configura o local do save
+mkdir -p          "${SAVE_DIR}/wine${WINE_ARCH}"
+export WINEPREFIX="${SAVE_DIR}/wine${WINE_ARCH}"
+
+################################################################################
+
+### Desativa a instalação automática do mono e do gecko.
+### Pode ser instalada manualmente depois para os jogos / programas que necessitam.
+
+export WINEDLLOVERRIDES='mscoree=d;mshtml=d'
+
+################################################################################
+
+### Resolve o bug do wine não aceitar comandos do teclado.
+### Resolve o bug dos programas não rodarem em janela.
+
+if ! [ -f "${SAVE_DIR}/wine${WINE_ARCH}/user.reg" ]; then
+    "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" wineboot
+
+    # Aguarda o wine criar uma configuração inicial básica.
+    for (( i = 0; i <= 60; i++ )); do
+        if [ -f "${SAVE_DIR}/wine${WINE_ARCH}/user.reg" ]; then
+            break
+        else
+            sleep 0.5
+        fi
+    done
+
+    # Usa o gerenciador de janelas interno do wine.
+    echo ''                             >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+    echo '[Software\\Wine\\X11 Driver]' >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+    echo '"Managed"="N"'                >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+
+    # Impede que o winecfg crie arquivos desnecessários.
+    echo '[Software\\Wine\\FileOpenAssociations]' >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+    echo '"Enable"="N"'                           >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+
+    # Registra um usuário no Wine.
+    sed -i s'/"RegisteredOrganization"=""/"RegisteredOrganization"="Batocera.PLUS"/' "${SAVE_DIR}/wine${WINE_ARCH}/system.reg"
+    sed -i s'/"RegisteredOwner"=""/"RegisteredOwner"="Alexandre Freire dos Santos"/' "${SAVE_DIR}/wine${WINE_ARCH}/system.reg"
+
+    # Desativa o DirectX 11
+    echo '[Software\\Wine\\DllOverrides]' >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+    echo '"d3d11"=""'                     >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
+
+    # Usa a partição share como unidade Z:
+    #rm "${SAVE_DIR}/wine${WINE_ARCH}/dosdevices/z:"
+    #ln -sf "${ROM_DIR}" "${SAVE_DIR}/wine${WINE_ARCH}/dosdevices/z:"
+
+    #sed -i s'/"My Pictures"=".*/"My Pictures"="C:\\users\\0\\My Pictures"/' "${SAVE_DIR}/wine${WINE_ARCH}/userdef.reg"
+
+    #"CommonPictures"=str(2):"%PUBLIC%\\Pictures"
+    #system.reg
+fi
+
+################################################################################
+
+### Executa o Wine
+
+exec "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" "$@"
+
+################################################################################
+
+# REFULGO
+#export PATH="/opt/Wine/bin32:${PATH:+:$PATH}"
+#export FONTCONFIG_PATH="/etc/fonts:${FONTCONFIG_PATH:+:$FONTCONFIG_PATH}"
+#export XDG_DATA_DIRS="/usr/share/:${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
+#export GSETTINGS_SCHEMA_DIR="/wine-staging/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
+#export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
+# https://wiki.archlinux.org/index.php/Wine
+# https://wiki.winehq.org/Wine_User%27s_Guide
+# https://wiki.winehq.org/FAQ
+
+
