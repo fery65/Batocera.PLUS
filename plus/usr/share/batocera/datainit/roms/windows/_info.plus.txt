@@ -1,0 +1,17 @@
+## SYSTEM WINDOWS GAMES ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted (Batocera.PLUS): ".plus .PLUS"
+-------------------------------------------------------------------------------
+
+Os jogos podem vir com um arquivo (.plus) ou uma pasta com arquivos.
+
+Exemplo:
+
+My Game.plus        (pasta)
+|---- batocera.plus (arquivo)
+|---- game.exe      (arquivo)
+|---- game.dat      (arquivo) (se existir)
+|---- game.bin      (arquivo) (se existir)
+|---- ...                     (se existir)
+
+-------------------------------------------------------------------------------

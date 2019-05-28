@@ -4,106 +4,144 @@
 ### Alexandre Freire dos Santos
 ### Email: alexxandre.freire@gmail.com
 
+# http://dl.winehq.org/wine
+# https://wiki.winehq.org/FAQ
+# https://wiki.winehq.org/Wine_User%27s_Guide
+# https://wiki.archlinux.org/index.php/Wine
+
 ################################################################################
 
+### CAMINHOS
+
+ROM_DIR='/userdata/roms/windows'
 WINE_DIR='/opt/Wine'
-SAVE_DIR='/userdata/saves/pcgames/Wine'
-ROM_DIR='/userdata/roms/pcgames'
+
+if [ "${WINEPREFIX}" ]; then
+    WINE_HOME="${WINEPREFIX}"
+else
+    WINE_HOME="${HOME}/configs/wine"
+fi
 
 ################################################################################
 
-### Define a arquitetura do executável e as bliotecas do sistema a serem usadas.
+### BIBLIOTECAS
 
 WINE_ARCH="$(basename "$0")"
 
 if [ "$WINE_ARCH" == 'wine' ]; then
     WINE_ARCH='32'
-    #ln -sf "${WINE_DIR}/wine32/lib/wine" /usr/lib
     export LD_LIBRARY_PATH="/lib32:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     export LD_LIBRARY_PATH="${WINE_DIR}/wine32/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
     export LIBGL_DRIVERS_PATH="/lib32/dri:${LIBGL_DRIVERS_PATH:+:$LIBGL_DRIVERS_PATH}"
 elif [ "$WINE_ARCH" == 'wine64' ]; then
     WINE_ARCH='64'
-    #ln -sf "${WINE_DIR}/wine64/lib/wine" /usr/lib
     export LD_LIBRARY_PATH="${WINE_DIR}/wine64/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 fi
 
 export PYTHONPATH="/usr/lib/python2.7:${PYTHONPATH:+:$PYTHONPATH}"
 export PERLLIB="/usr/share/perl5/:${PERLLIB:+:$PERLLIB}"
 
-################################################################################
-
-### Configura o local do save
-mkdir -p          "${SAVE_DIR}/wine${WINE_ARCH}"
-export WINEPREFIX="${SAVE_DIR}/wine${WINE_ARCH}"
-
-################################################################################
-
-### Desativa a instalação automática do mono e do gecko.
-### Pode ser instalada manualmente depois para os jogos / programas que necessitam.
-
-export WINEDLLOVERRIDES='mscoree=d;mshtml=d'
-
-################################################################################
-
-### Resolve o bug do wine não aceitar comandos do teclado.
-### Resolve o bug dos programas não rodarem em janela.
-
-if ! [ -f "${SAVE_DIR}/wine${WINE_ARCH}/user.reg" ]; then
-    "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" wineboot
-
-    # Aguarda o wine criar uma configuração inicial básica.
-    for (( i = 0; i <= 60; i++ )); do
-        if [ -f "${SAVE_DIR}/wine${WINE_ARCH}/user.reg" ]; then
-            break
-        else
-            sleep 0.5
-        fi
-    done
-
-    # Usa o gerenciador de janelas interno do wine.
-    echo ''                             >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-    echo '[Software\\Wine\\X11 Driver]' >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-    echo '"Managed"="N"'                >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-
-    # Impede que o winecfg crie arquivos desnecessários.
-    echo '[Software\\Wine\\FileOpenAssociations]' >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-    echo '"Enable"="N"'                           >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-
-    # Registra um usuário no Wine.
-    sed -i s'/"RegisteredOrganization"=""/"RegisteredOrganization"="Batocera.PLUS"/' "${SAVE_DIR}/wine${WINE_ARCH}/system.reg"
-    sed -i s'/"RegisteredOwner"=""/"RegisteredOwner"="Alexandre Freire dos Santos"/' "${SAVE_DIR}/wine${WINE_ARCH}/system.reg"
-
-    # Desativa o DirectX 11
-    echo '[Software\\Wine\\DllOverrides]' >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-    echo '"d3d11"=""'                     >> "${SAVE_DIR}/wine${WINE_ARCH}/user.reg"
-
-    # Usa a partição share como unidade Z:
-    #rm "${SAVE_DIR}/wine${WINE_ARCH}/dosdevices/z:"
-    #ln -sf "${ROM_DIR}" "${SAVE_DIR}/wine${WINE_ARCH}/dosdevices/z:"
-
-    #sed -i s'/"My Pictures"=".*/"My Pictures"="C:\\users\\0\\My Pictures"/' "${SAVE_DIR}/wine${WINE_ARCH}/userdef.reg"
-
-    #"CommonPictures"=str(2):"%PUBLIC%\\Pictures"
-    #system.reg
-fi
-
-################################################################################
-
-### Executa o Wine
-
-exec "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" "$@"
-
-################################################################################
-
 # REFULGO
-#export PATH="/opt/Wine/bin32:${PATH:+:$PATH}"
 #export FONTCONFIG_PATH="/etc/fonts:${FONTCONFIG_PATH:+:$FONTCONFIG_PATH}"
 #export XDG_DATA_DIRS="/usr/share/:${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
 #export GSETTINGS_SCHEMA_DIR="/wine-staging/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
 #export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas:${GSETTINGS_SCHEMA_DIR:+:$GSETTINGS_SCHEMA_DIR}"
-# https://wiki.archlinux.org/index.php/Wine
-# https://wiki.winehq.org/Wine_User%27s_Guide
-# https://wiki.winehq.org/FAQ
 
+################################################################################
+
+### INICIA O WINE
+
+if [ -f "${WINE_HOME}/wine${WINE_ARCH}/user.reg" ]; then
+    export WINEPREFIX="${WINE_HOME}/wine${WINE_ARCH}"
+    exec "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" "$@"
+fi
+
+################################################################################
+
+### MONO / GECKO
+
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}"
+
+export WINEDLLOVERRIDES='mscoree=d;mshtml=d'
+
+# Instala o mono e o gecko se a variável WINEPREFIX não for definida pelo usuário.
+if [ "${WINEPREFIX}" == "${WINE_HOME}" ]; then
+    export WINEPREFIX="${WINE_HOME}/wine${WINE_ARCH}"
+    "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" wineboot
+else
+    export WINEPREFIX="${WINE_HOME}/wine${WINE_ARCH}"
+    "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" msiexec /i "${WINE_DIR}/apps/wine-mono.msi"
+    "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" msiexec /i "${WINE_DIR}/apps/wine-gecko-x${WINE_ARCH}.msi"
+fi
+
+# Aguarda o registro do windows ser criado para prosseguir.
+for (( i = 0; i <= 60; i++ )); do
+    if [ -f "${WINE_HOME}/wine${WINE_ARCH}/user.reg" ]; then
+        break
+    else
+        sleep 1
+    fi
+done
+
+################################################################################
+
+### CONFIGURAÇÃO BÁSICA
+
+# Usa o gerenciador de janelas interno do wine.
+echo ''                             >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+echo '[Software\\Wine\\X11 Driver]' >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+echo '"Managed"="N"'                >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+
+# Impede que o winecfg crie arquivos desnecessários.
+echo '[Software\\Wine\\FileOpenAssociations]' >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+echo '"Enable"="N"'                           >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+
+# Registra um usuário no Wine.
+sed -i s'/"RegisteredOrganization"=""/"RegisteredOrganization"="Batocera.PLUS"/' "${WINE_HOME}/wine${WINE_ARCH}/system.reg"
+sed -i s'/"RegisteredOwner"=""/"RegisteredOwner"="Batocera.PLUS"/'               "${WINE_HOME}/wine${WINE_ARCH}/system.reg"
+
+# Unidade X: é a pasta de roms (jogos) de Windows.
+# Pode ser usada para instalar jogos que não funcionam sem instalar.
+ln -sf "${ROM_DIR}" "${WINE_HOME}/wine${WINE_ARCH}/dosdevices/x:"
+
+# Desativa o DirectX 11
+#OPENGL="$(glxinfo | grep 'Max core profile version:' | cut -d ' ' -f 9)"
+#if [ "${OPENGL}" -lt "3.3" ]; then
+#    echo '[Software\\Wine\\DllOverrides]' >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+#    echo '"d3d11"=""'                     >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+#fi
+echo '[Software\\Wine\\DllOverrides]' >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+echo '"d3d11"=""'                     >> "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+
+# Configura diretórios padrões para as principais pastas do usuário.
+sed -i s'/\"Desktop\"=\"C:\\\\users\\\\0\\\\.*/\"Desktop\"=\"C:\\\\users\\\\0\\\\Desktop\"/'                     "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+sed -i s'/\"Desktop\"=str(2):\"%USERPROFILE%\\\\.*/\"Desktop\"=str(2):\"%USERPROFILE%\\\\Desktop\"/'             "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/Desktop"
+
+sed -i s'/\"My Music\"=\"C:\\\\users\\\\0\\\\.*/\"My Music\"=\"C:\\\\users\\\\0\\\\My Music\"/'                  "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+sed -i s'/\"My Music\"=str(2):\"%USERPROFILE%\\\\.*/\"My Music\"=str(2):\"%USERPROFILE%\\\\My Music\"/'          "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/My Music"
+
+sed -i s'/\"My Pictures\"=\"C:\\\\users\\\\0\\\\.*/\"My Pictures\"=\"C:\\\\users\\\\0\\\\My Pictures\"/'         "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+sed -i s'/\"My Pictures\"=str(2):\"%USERPROFILE%\\\\.*/\"My Pictures\"=str(2):\"%USERPROFILE%\\\\My Pictures\"/' "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/My Pictures"
+
+sed -i s'/\"My Pictures\"=\"C:\\\\users\\\\0\\\\.*/\"My Pictures\"=\"C:\\\\users\\\\0\\\\My Pictures\"/'         "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+sed -i s'/\"My Pictures\"=str(2):\"%USERPROFILE%\\\\.*/\"My Pictures\"=str(2):\"%USERPROFILE%\\\\My Pictures\"/' "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/My Pictures"
+
+sed -i s'/\"My Videos\"=\"C:\\\\users\\\\0\\\\.*/\"My Videos\"=\"C:\\\\users\\\\0\\\\My Videos\"/'               "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+sed -i s'/\"My Videos\"=str(2):\"%USERPROFILE%\\\\.*/\"My Videos\"=str(2):\"%USERPROFILE%\\\\My Videos\"/'       "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/My Videos"
+
+sed -i s'/\"Personal\"=\"C:\\\\users\\\\0\\\\.*/\"Personal\"=\"C:\\\\users\\\\0\\\\Personal\"/'                  "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+sed -i s'/\"Personal\"=str(2):\"%USERPROFILE%\\\\.*/\"Personal\"=str(2):\"%USERPROFILE%\\\\Personal\"/'          "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
+mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/Personal"
+
+################################################################################
+
+### INICIA O WINE PELA PRIMEIRA VEZ
+
+export WINEPREFIX="${WINE_HOME}/wine${WINE_ARCH}"
+exec "${WINE_DIR}/wine${WINE_ARCH}/bin/wine" "$@"
 
