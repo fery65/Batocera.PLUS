@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_VERSION = 4.7
+WINE_VERSION = 4.9
 WINE_SOURCE = wine-$(WINE_VERSION).tar.xz
 WINE_SITE = https://dl.winehq.org/wine/source/4.x
 WINE_LICENSE = LGPL-2.1+
@@ -347,6 +347,16 @@ endef
 define HOST_WINE_INSTALL_CMDS
 	:
 endef
+
+# We are focused on the cross compiling tools, disable everything else
+HOST_WINE_CONF_OPTS += \
+    --disable-tests    \
+	--without-gnutls   \
+	--without-capi     \
+	--without-cups     \
+    --without-oss      \
+	--without-pulse    \
+	--without-sane
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

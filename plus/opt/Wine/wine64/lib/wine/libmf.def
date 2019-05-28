@@ -28,8 +28,8 @@ EXPORTS
   MFCreateASFStreamingMediaSinkActivate @23 PRIVATE
   MFCreateAggregateSource @24 PRIVATE
   MFCreateAppSourceProxy @25 PRIVATE
-  MFCreateAudioRenderer @26 PRIVATE
-  MFCreateAudioRendererActivate @27 PRIVATE
+  MFCreateAudioRenderer @26
+  MFCreateAudioRendererActivate @27
   MFCreateByteCacheFile @28 PRIVATE
   MFCreateCacheManager @29 PRIVATE
   MFCreateCredentialCache @30 PRIVATE
@@ -56,7 +56,7 @@ EXPORTS
   MFCreateRemoteDesktopPlugin @51 PRIVATE
   MFCreateSAMIByteStreamPlugin @52 PRIVATE
   MFCreateSampleCopierMFT @53 PRIVATE
-  MFCreateSampleGrabberSinkActivate @54 PRIVATE
+  MFCreateSampleGrabberSinkActivate @54
   MFCreateSecureHttpSchemePlugin @55 PRIVATE
   MFCreateSequencerSegmentOffset @56 PRIVATE
   MFCreateSequencerSource @57
@@ -75,7 +75,7 @@ EXPORTS
   MFCreateVideoRendererActivate @70 PRIVATE
   MFCreateWMAEncoderActivate @71 PRIVATE
   MFCreateWMVEncoderActivate @72 PRIVATE
-  MFEnumDeviceSources @73 PRIVATE
+  MFEnumDeviceSources @73
   MFGetMultipleServiceProviders @74 PRIVATE
   MFGetService @75
   MFGetSupportedMimeTypes @76

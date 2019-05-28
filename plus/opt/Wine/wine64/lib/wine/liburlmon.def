@@ -53,44 +53,46 @@ EXPORTS
   GetClassFileOrMime @48
   GetClassURL @49 PRIVATE
   GetComponentIDFromCLSSPEC @50 PRIVATE
-  GetMarkOfTheWeb @51 PRIVATE
-  GetSoftwareUpdateInfo @52
-  HlinkGoBack @53 PRIVATE
-  HlinkGoForward @54 PRIVATE
-  HlinkNavigateMoniker @55 PRIVATE
-  HlinkNavigateString @56
-  HlinkSimpleNavigateToMoniker @57
-  HlinkSimpleNavigateToString @58
-  IEInstallScope @59 PRIVATE
-  IsAsyncMoniker @60
-  IsLoggingEnabledA @61
-  IsLoggingEnabledW @62
-  IsValidURL @63
-  MkParseDisplayNameEx @64
-  ObtainUserAgentString @65
-  PrivateCoInstall @66 PRIVATE
-  RegisterBindStatusCallback @67
-  RegisterFormatEnumerator @68
-  RegisterMediaTypeClass @69 PRIVATE
-  RegisterMediaTypes @70
-  ReleaseBindInfo @71
-  RevokeBindStatusCallback @72
-  RevokeFormatEnumerator @73
-  SetSoftwareUpdateAdvertisementState @74 PRIVATE
-  URLDownloadA @75 PRIVATE
-  URLDownloadToCacheFileA @76
-  URLDownloadToCacheFileW @77
-  URLDownloadToFileA @78
-  URLDownloadToFileW @79
-  URLDownloadW @80 PRIVATE
-  URLOpenBlockingStreamA @81
-  URLOpenBlockingStreamW @82
-  URLOpenPullStreamA @83 PRIVATE
-  URLOpenPullStreamW @84 PRIVATE
-  URLOpenStreamA @85
-  URLOpenStreamW @86
-  UrlMkBuildVersion @87 PRIVATE
-  UrlMkGetSessionOption @88
-  UrlMkSetSessionOption @89
-  WriteHitLogging @90 PRIVATE
-  ZonesReInit @91 PRIVATE
+  GetIUriPriv @51
+  GetMarkOfTheWeb @52 PRIVATE
+  GetSoftwareUpdateInfo @53
+  HlinkGoBack @54 PRIVATE
+  HlinkGoForward @55 PRIVATE
+  HlinkNavigateMoniker @56 PRIVATE
+  HlinkNavigateString @57
+  HlinkSimpleNavigateToMoniker @58
+  HlinkSimpleNavigateToString @59
+  IEInstallScope @60 PRIVATE
+  IsAsyncMoniker @61
+  IsLoggingEnabledA @62
+  IsLoggingEnabledW @63
+  IsValidURL @64
+  MkParseDisplayNameEx @65
+  ObtainUserAgentString @66
+  PrivateCoInstall @67 PRIVATE
+  RegisterBindStatusCallback @68
+  RegisterFormatEnumerator @69
+  RegisterMediaTypeClass @70 PRIVATE
+  RegisterMediaTypes @71
+  ReleaseBindInfo @72
+  RevokeBindStatusCallback @73
+  RevokeFormatEnumerator @74
+  SetSoftwareUpdateAdvertisementState @75 PRIVATE
+  ShouldShowIntranetWarningSecband @76
+  URLDownloadA @77 PRIVATE
+  URLDownloadToCacheFileA @78
+  URLDownloadToCacheFileW @79
+  URLDownloadToFileA @80
+  URLDownloadToFileW @81
+  URLDownloadW @82 PRIVATE
+  URLOpenBlockingStreamA @83
+  URLOpenBlockingStreamW @84
+  URLOpenPullStreamA @85 PRIVATE
+  URLOpenPullStreamW @86 PRIVATE
+  URLOpenStreamA @87
+  URLOpenStreamW @88
+  UrlMkBuildVersion @89 PRIVATE
+  UrlMkGetSessionOption @90
+  UrlMkSetSessionOption @91
+  WriteHitLogging @92 PRIVATE
+  ZonesReInit @93 PRIVATE

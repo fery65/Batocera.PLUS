@@ -3,7 +3,7 @@
 LIBRARY ntoskrnl.exe
 
 EXPORTS
-  ExAcquireFastMutexUnsafe@4=__fastcall_ExAcquireFastMutexUnsafe @1
+  ExAcquireFastMutexUnsafe@4 @1
   ExAcquireRundownProtection@0 @2 PRIVATE
   ExAcquireRundownProtectionEx@0 @3 PRIVATE
   ExInitializeRundownProtection@0 @4 PRIVATE
@@ -13,8 +13,8 @@ EXPORTS
   ExInterlockedPopEntrySList@8=__fastcall_NTOSKRNL_ExInterlockedPopEntrySList @8
   ExInterlockedPushEntrySList@12=__fastcall_NTOSKRNL_ExInterlockedPushEntrySList @9
   ExReInitializeRundownProtection@0 @10 PRIVATE
-  ExReleaseFastMutexUnsafe@4=__fastcall_ExReleaseFastMutexUnsafe @11
-  ExReleaseResourceLite@4=__fastcall_ExReleaseResourceLite @12
+  ExReleaseFastMutexUnsafe@4 @11
+  ExReleaseResourceLite@4 @12
   ExReleaseRundownProtection@0 @13 PRIVATE
   ExReleaseRundownProtectionEx@0 @14 PRIVATE
   ExRundownCompleted@0 @15 PRIVATE
@@ -27,7 +27,7 @@ EXPORTS
   ExfInterlockedInsertTailList@0 @22 PRIVATE
   ExfInterlockedPopEntryList@0 @23 PRIVATE
   ExfInterlockedPushEntryList@0 @24 PRIVATE
-  ExfInterlockedRemoveHeadList@8=__fastcall_ExfInterlockedRemoveHeadList @25
+  ExfInterlockedRemoveHeadList@8 @25
   ExfReleasePushLock@0 @26 PRIVATE
   Exfi386InterlockedDecrementLong@0 @27 PRIVATE
   Exfi386InterlockedExchangeUlong@0 @28 PRIVATE
@@ -44,21 +44,21 @@ EXPORTS
   IoReadPartitionTable@0 @39 PRIVATE
   IoSetPartitionInformation@0 @40 PRIVATE
   IoWritePartitionTable@0 @41 PRIVATE
-  IofCallDriver@8=__fastcall_IofCallDriver @42
-  IofCompleteRequest@8=__fastcall_IofCompleteRequest @43
-  KeAcquireInStackQueuedSpinLockAtDpcLevel@8=__fastcall_KeAcquireInStackQueuedSpinLockAtDpcLevel @44
+  IofCallDriver@8 @42
+  IofCompleteRequest@8 @43
+  KeAcquireInStackQueuedSpinLockAtDpcLevel@8 @44
   KeEnterGuardedRegion@0 @45
   KeExpandKernelStackAndCallout@12 @46
   KeExpandKernelStackAndCalloutEx@20 @47
   KeLeaveGuardedRegion@0 @48
-  KeReleaseInStackQueuedSpinLockFromDpcLevel@4=__fastcall_KeReleaseInStackQueuedSpinLockFromDpcLevel @49
+  KeReleaseInStackQueuedSpinLockFromDpcLevel@4 @49
   KeSetTimeUpdateNotifyRoutine@0 @50 PRIVATE
   KefAcquireSpinLockAtDpcLevel@0 @51 PRIVATE
   KefReleaseSpinLockFromDpcLevel@0 @52 PRIVATE
   KiAcquireSpinLock@0 @53 PRIVATE
   KiReleaseSpinLock@0 @54 PRIVATE
-  ObfDereferenceObject@4=__fastcall_ObfDereferenceObject @55
-  ObfReferenceObject@4=__fastcall_ObfReferenceObject @56
+  ObfDereferenceObject@4 @55
+  ObfReferenceObject@4 @56
   RtlPrefetchMemoryNonTemporal@0 @57 PRIVATE
   RtlUlongByteSwap @58
   RtlUlonglongByteSwap @59
@@ -140,7 +140,7 @@ EXPORTS
   ExEnumHandleTable@0 @135 PRIVATE
   ExEventObjectType @136 DATA
   ExExtendZone@0 @137 PRIVATE
-  ExfUnblockPushLock@8=__fastcall_ExfUnblockPushLock @138
+  ExfUnblockPushLock@8 @138
   ExFreePool@4 @139
   ExFreePoolWithTag@8 @140
   ExFreeToPagedLookasideList@0 @141 PRIVATE
@@ -329,13 +329,13 @@ EXPORTS
   IoAttachDeviceByPointer@0 @324 PRIVATE
   IoAttachDeviceToDeviceStack@8 @325
   IoAttachDeviceToDeviceStackSafe@0 @326 PRIVATE
-  IoBuildAsynchronousFsdRequest@0 @327 PRIVATE
+  IoBuildAsynchronousFsdRequest@24 @327
   IoBuildDeviceIoControlRequest@36 @328
   IoBuildPartialMdl@0 @329 PRIVATE
   IoBuildSynchronousFsdRequest@28 @330
   IoCallDriver@8 @331
   IoCancelFileOpen@0 @332 PRIVATE
-  IoCancelIrp@0 @333 PRIVATE
+  IoCancelIrp@4 @333
   IoCheckDesiredAccess@0 @334 PRIVATE
   IoCheckEaBufferValidity@0 @335 PRIVATE
   IoCheckFunctionAccess@0 @336 PRIVATE
@@ -382,7 +382,7 @@ EXPORTS
   IoFreeErrorLogEntry@0 @377 PRIVATE
   IoFreeIrp@4 @378
   IoFreeMdl@4 @379
-  IoFreeWorkItem@0 @380 PRIVATE
+  IoFreeWorkItem@4 @380
   IoGetAttachedDevice@4 @381
   IoGetAttachedDeviceReference@4 @382
   IoGetBaseFileSystemDeviceObject@0 @383 PRIVATE
@@ -427,7 +427,7 @@ EXPORTS
   IoQueryFileInformation@0 @422 PRIVATE
   IoQueryVolumeInformation@0 @423 PRIVATE
   IoQueueThreadIrp@0 @424 PRIVATE
-  IoQueueWorkItem@0 @425 PRIVATE
+  IoQueueWorkItem@16 @425
   IoRaiseHardError@0 @426 PRIVATE
   IoRaiseInformationalHardError@0 @427 PRIVATE
   IoReadDiskSignature@0 @428 PRIVATE
@@ -819,7 +819,7 @@ EXPORTS
   ObLogSecurityDescriptor@0 @814 PRIVATE
   ObMakeTemporaryObject@0 @815 PRIVATE
   ObOpenObjectByName@0 @816 PRIVATE
-  ObOpenObjectByPointer@0 @817 PRIVATE
+  ObOpenObjectByPointer@28 @817
   ObQueryNameString@16 @818
   ObQueryObjectAuditingByHandle@0 @819 PRIVATE
   ObReferenceObjectByHandle@24 @820
@@ -883,7 +883,7 @@ EXPORTS
   PsGetProcessExitTime@0 @878 PRIVATE
   PsGetProcessId@4 @879
   PsGetProcessImageFileName@0 @880 PRIVATE
-  PsGetProcessInheritedFromUniqueProcessId@0 @881 PRIVATE
+  PsGetProcessInheritedFromUniqueProcessId@4 @881
   PsGetProcessJob@0 @882 PRIVATE
   PsGetProcessPeb@0 @883 PRIVATE
   PsGetProcessPriorityClass@0 @884 PRIVATE
@@ -894,17 +894,17 @@ EXPORTS
   PsGetProcessWin32WindowStation@0 @889 PRIVATE
   PsGetThreadFreezeCount@0 @890 PRIVATE
   PsGetThreadHardErrorsAreDisabled@0 @891 PRIVATE
-  PsGetThreadId@0 @892 PRIVATE
+  PsGetThreadId@4 @892
   PsGetThreadProcess@0 @893 PRIVATE
-  PsGetThreadProcessId@0 @894 PRIVATE
+  PsGetThreadProcessId@4 @894
   PsGetThreadSessionId@0 @895 PRIVATE
   PsGetThreadTeb@0 @896 PRIVATE
   PsGetThreadWin32Thread@0 @897 PRIVATE
   PsGetVersion@16 @898
   PsImpersonateClient@20 @899
-  PsInitialSystemProcess@0 @900 PRIVATE
+  PsInitialSystemProcess @900 DATA
   PsIsProcessBeingDebugged@0 @901 PRIVATE
-  PsIsSystemThread@0 @902 PRIVATE
+  PsIsSystemThread@4 @902
   PsIsThreadImpersonating@0 @903 PRIVATE
   PsIsThreadTerminating@0 @904 PRIVATE
   PsJobType@0 @905 PRIVATE
@@ -1366,7 +1366,7 @@ EXPORTS
   ZwQueryFullAttributesFile@8=NtQueryFullAttributesFile @1361 PRIVATE
   ZwQueryInformationFile@20=NtQueryInformationFile @1362 PRIVATE
   ZwQueryInformationJobObject@20=NtQueryInformationJobObject @1363 PRIVATE
-  ZwQueryInformationProcess@20=NtQueryInformationProcess @1364 PRIVATE
+  ZwQueryInformationProcess@20=NtQueryInformationProcess @1364
   ZwQueryInformationThread@20=NtQueryInformationThread @1365 PRIVATE
   ZwQueryInformationToken@20=NtQueryInformationToken @1366 PRIVATE
   ZwQueryInstallUILanguage@4=NtQueryInstallUILanguage @1367 PRIVATE

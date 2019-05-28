@@ -26,6 +26,7 @@ EXPORTS
   GetProcessImageFileNameW@12=kernel32.K32GetProcessImageFileNameW @21
   GetProcessMemoryInfo@12=kernel32.K32GetProcessMemoryInfo @22
   GetWsChanges@12=kernel32.K32GetWsChanges @23
-  InitializeProcessForWsWatch@4=kernel32.K32InitializeProcessForWsWatch @24
-  QueryWorkingSet@12=kernel32.K32QueryWorkingSet @25
-  QueryWorkingSetEx@12=kernel32.K32QueryWorkingSetEx @26
+  GetWsChangesEx@12=kernel32.K32GetWsChangesEx @24
+  InitializeProcessForWsWatch@4=kernel32.K32InitializeProcessForWsWatch @25
+  QueryWorkingSet@12=kernel32.K32QueryWorkingSet @26
+  QueryWorkingSetEx@12=kernel32.K32QueryWorkingSetEx @27

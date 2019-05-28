@@ -83,6 +83,8 @@ for (( i = 0; i <= 60; i++ )); do
     fi
 done
 
+sleep 1
+
 ################################################################################
 
 ### CONFIGURAÇÃO BÁSICA
@@ -137,6 +139,8 @@ mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/My Videos"
 sed -i s'/\"Personal\"=\"C:\\\\users\\\\0\\\\.*/\"Personal\"=\"C:\\\\users\\\\0\\\\Personal\"/'                  "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
 sed -i s'/\"Personal\"=str(2):\"%USERPROFILE%\\\\.*/\"Personal\"=str(2):\"%USERPROFILE%\\\\Personal\"/'          "${WINE_HOME}/wine${WINE_ARCH}/user.reg"
 mkdir -p "${WINE_HOME}/wine${WINE_ARCH}/drive_c/users/0/Personal"
+
+sleep 1
 
 ################################################################################
 

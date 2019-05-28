@@ -244,326 +244,328 @@ EXPORTS
   InitializeAcl @239
   InitializeSecurityDescriptor @240
   InitializeSid @241
-  InitiateSystemShutdownA @242
-  InitiateSystemShutdownExA @243
-  InitiateSystemShutdownExW @244
-  InitiateSystemShutdownW @245
-  InstallApplication @246 PRIVATE
-  IsProcessRestricted @247 PRIVATE
-  IsTextUnicode @248
-  IsTokenRestricted @249
-  IsValidAcl @250
-  IsValidSecurityDescriptor @251
-  IsValidSid @252
-  IsWellKnownSid @253
-  LockServiceDatabase @254
-  LogonUserA @255
-  LogonUserW @256
-  LookupAccountNameA @257
-  LookupAccountNameW @258
-  LookupAccountSidA @259
-  LookupAccountSidW @260
-  LookupPrivilegeDisplayNameA @261
-  LookupPrivilegeDisplayNameW @262
-  LookupPrivilegeNameA @263
-  LookupPrivilegeNameW @264
-  LookupPrivilegeValueA @265
-  LookupPrivilegeValueW @266
-  LookupSecurityDescriptorPartsA @267
-  LookupSecurityDescriptorPartsW @268
-  LsaAddAccountRights @269
-  LsaAddPrivilegesToAccount @270 PRIVATE
-  LsaClose @271
-  LsaCreateAccount @272 PRIVATE
-  LsaCreateSecret @273 PRIVATE
-  LsaCreateTrustedDomain @274 PRIVATE
-  LsaCreateTrustedDomainEx @275
-  LsaDelete @276 PRIVATE
-  LsaDeleteTrustedDomain @277
-  LsaEnumerateAccountRights @278
-  LsaEnumerateAccounts @279 PRIVATE
-  LsaEnumerateAccountsWithUserRight @280
-  LsaEnumeratePrivileges @281 PRIVATE
-  LsaEnumeratePrivilegesOfAccount @282 PRIVATE
-  LsaEnumerateTrustedDomains @283
-  LsaEnumerateTrustedDomainsEx @284
-  LsaFreeMemory @285
-  LsaGetSystemAccessAccount @286 PRIVATE
-  LsaICLookupNames @287 PRIVATE
-  LsaICLookupSids @288 PRIVATE
-  LsaLookupNames @289
-  LsaLookupNames2 @290
-  LsaLookupPrivilegeDisplayName @291
-  LsaLookupPrivilegeName @292
-  LsaLookupSids @293
-  LsaNtStatusToWinError @294
-  LsaOpenAccount @295 PRIVATE
-  LsaOpenPolicy @296
-  LsaOpenSecret @297 PRIVATE
-  LsaOpenTrustedDomain @298 PRIVATE
-  LsaOpenTrustedDomainByName @299
-  LsaQueryInfoTrustedDomain @300 PRIVATE
-  LsaQueryInformationPolicy @301
-  LsaQuerySecret @302 PRIVATE
-  LsaQueryTrustedDomainInfo @303
-  LsaQueryTrustedDomainInfoByName @304
-  LsaRegisterPolicyChangeNotification @305
-  LsaRemoveAccountRights @306
-  LsaRemovePrivilegesFromAccount @307 PRIVATE
-  LsaRetrievePrivateData @308
-  LsaSetInformationPolicy @309
-  LsaSetInformationTrustedDomain @310 PRIVATE
-  LsaSetSecret @311
-  LsaSetSystemAccessAccount @312 PRIVATE
-  LsaSetTrustedDomainInfoByName @313
-  LsaSetTrustedDomainInformation @314
-  LsaStorePrivateData @315
-  LsaUnregisterPolicyChangeNotification @316
-  MD4Final @317
-  MD4Init @318
-  MD4Update @319
-  MD5Final @320
-  MD5Init @321
-  MD5Update @322
-  MakeAbsoluteSD @323
-  MakeSelfRelativeSD @324
-  MapGenericMask @325
-  NotifyBootConfigStatus @326
-  NotifyChangeEventLog @327
-  NotifyServiceStatusChangeW @328
-  ObjectCloseAuditAlarmA @329
-  ObjectCloseAuditAlarmW @330
-  ObjectDeleteAuditAlarmW @331
-  ObjectOpenAuditAlarmA @332
-  ObjectOpenAuditAlarmW @333
-  ObjectPrivilegeAuditAlarmA @334
-  ObjectPrivilegeAuditAlarmW @335
-  OpenBackupEventLogA @336
-  OpenBackupEventLogW @337
-  OpenEncryptedFileRawA @338
-  OpenEncryptedFileRawW @339
-  OpenEventLogA @340
-  OpenEventLogW @341
-  OpenProcessToken @342
-  OpenSCManagerA @343
-  OpenSCManagerW @344
-  OpenServiceA @345
-  OpenServiceW @346
-  OpenThreadToken @347
-  OpenTraceA @348
-  OpenTraceW @349
-  PerfCreateInstance @350
-  PerfDeleteInstance @351
-  PerfSetCounterRefValue @352
-  PerfSetCounterSetInfo @353
-  PerfStartProvider @354
-  PerfStartProviderEx @355
-  PerfStopProvider @356
-  PrivilegeCheck @357
-  PrivilegedServiceAuditAlarmA @358
-  PrivilegedServiceAuditAlarmW @359
-  ProcessTrace @360
-  QueryAllTracesA @361
-  QueryAllTracesW @362
-  QueryServiceConfig2A @363
-  QueryServiceConfig2W @364
-  QueryServiceConfigA @365
-  QueryServiceConfigW @366
-  QueryServiceLockStatusA @367
-  QueryServiceLockStatusW @368
-  QueryServiceObjectSecurity @369
-  QueryServiceStatus @370
-  QueryServiceStatusEx @371
-  QueryTraceW @372
-  QueryWindows31FilesMigration @373
-  ReadEncryptedFileRaw @374
-  ReadEventLogA @375
-  ReadEventLogW @376
-  RegCloseKey @377
-  RegConnectRegistryA @378
-  RegConnectRegistryW @379
-  RegCopyTreeA @380
-  RegCopyTreeW @381
-  RegCreateKeyA @382
-  RegCreateKeyExA @383
-  RegCreateKeyExW @384
-  RegCreateKeyTransactedA @385
-  RegCreateKeyTransactedW @386
-  RegCreateKeyW @387
-  RegDeleteKeyA @388
-  RegDeleteKeyExA @389
-  RegDeleteKeyExW @390
-  RegDeleteKeyValueA @391
-  RegDeleteKeyValueW @392
-  RegDeleteKeyW @393
-  RegDeleteTreeA @394
-  RegDeleteTreeW @395
-  RegDeleteValueA @396
-  RegDeleteValueW @397
-  RegDisablePredefinedCache @398
-  RegDisableReflectionKey @399
-  RegEnumKeyA @400
-  RegEnumKeyExA @401
-  RegEnumKeyExW @402
-  RegEnumKeyW @403
-  RegEnumValueA @404
-  RegEnumValueW @405
-  RegFlushKey @406
-  RegGetKeySecurity @407
-  RegGetValueA @408
-  RegGetValueW @409
-  RegLoadAppKeyA @410
-  RegLoadAppKeyW @411
-  RegLoadKeyA @412
-  RegLoadKeyW @413
-  RegLoadMUIStringA @414
-  RegLoadMUIStringW @415
-  RegNotifyChangeKeyValue @416
-  RegOpenCurrentUser @417
-  RegOpenKeyA @418
-  RegOpenKeyExA @419
-  RegOpenKeyExW @420
-  RegOpenKeyW @421
-  RegOpenUserClassesRoot @422
-  RegOverridePredefKey @423
-  RegQueryInfoKeyA @424
-  RegQueryInfoKeyW @425
-  RegQueryMultipleValuesA @426
-  RegQueryMultipleValuesW @427
-  RegQueryReflectionKey @428
-  RegQueryValueA @429
-  RegQueryValueExA @430
-  RegQueryValueExW @431
-  RegQueryValueW @432
-  RegRemapPreDefKey @433 PRIVATE
-  RegReplaceKeyA @434
-  RegReplaceKeyW @435
-  RegRestoreKeyA @436
-  RegRestoreKeyW @437
-  RegSaveKeyA @438
-  RegSaveKeyExA @439
-  RegSaveKeyExW @440
-  RegSaveKeyW @441
-  RegSetKeySecurity @442
-  RegSetKeyValueA @443
-  RegSetKeyValueW @444
-  RegSetValueA @445
-  RegSetValueExA @446
-  RegSetValueExW @447
-  RegSetValueW @448
-  RegUnLoadKeyA @449
-  RegUnLoadKeyW @450
-  RegisterEventSourceA @451
-  RegisterEventSourceW @452
-  RegisterServiceCtrlHandlerA @453
-  RegisterServiceCtrlHandlerExA @454
-  RegisterServiceCtrlHandlerExW @455
-  RegisterServiceCtrlHandlerW @456
-  RegisterTraceGuidsA=ntdll.EtwRegisterTraceGuidsA @457
-  RegisterTraceGuidsW=ntdll.EtwRegisterTraceGuidsW @458
-  RegisterWaitChainCOMCallback @459
-  ReportEventA @460
-  ReportEventW @461
-  RevertToSelf @462
-  SaferCloseLevel @463
-  SaferComputeTokenFromLevel @464
-  SaferCreateLevel @465
-  SaferGetPolicyInformation @466
-  SaferIdentifyLevel @467
-  SaferSetLevelInformation @468
-  SetAclInformation @469
-  SetEntriesInAclA @470
-  SetEntriesInAclW @471
-  SetFileSecurityA @472
-  SetFileSecurityW @473
-  SetKernelObjectSecurity @474
-  SetNamedSecurityInfoA @475
-  SetNamedSecurityInfoW @476
-  SetPrivateObjectSecurity @477
-  SetSecurityDescriptorControl @478
-  SetSecurityDescriptorDacl @479
-  SetSecurityDescriptorGroup @480
-  SetSecurityDescriptorOwner @481
-  SetSecurityDescriptorSacl @482
-  SetSecurityInfo @483
-  SetServiceBits @484
-  SetServiceObjectSecurity @485
-  SetServiceStatus @486
-  SetThreadToken @487
-  SetTokenInformation @488
-  StartServiceA @489
-  StartServiceCtrlDispatcherA @490
-  StartServiceCtrlDispatcherW @491
-  StartServiceW @492
-  StartTraceA @493
-  StartTraceW @494
-  StopTraceA @495
-  StopTraceW @496
-  SynchronizeWindows31FilesAndWindowsNTRegistry @497
-  SystemFunction001 @498
-  SystemFunction002 @499
-  SystemFunction003 @500
-  SystemFunction004 @501
-  SystemFunction005 @502
-  SystemFunction006 @503
-  SystemFunction007 @504
-  SystemFunction008 @505
-  SystemFunction009 @506
-  SystemFunction010 @507
-  SystemFunction011=SystemFunction010 @508
-  SystemFunction012 @509
-  SystemFunction013 @510
-  SystemFunction014=SystemFunction012 @511
-  SystemFunction015=SystemFunction013 @512
-  SystemFunction016=SystemFunction012 @513
-  SystemFunction017=SystemFunction013 @514
-  SystemFunction018=SystemFunction012 @515
-  SystemFunction019=SystemFunction013 @516
-  SystemFunction020=SystemFunction012 @517
-  SystemFunction021=SystemFunction013 @518
-  SystemFunction022=SystemFunction012 @519
-  SystemFunction023=SystemFunction013 @520
-  SystemFunction024 @521
-  SystemFunction025 @522
-  SystemFunction026=SystemFunction024 @523
-  SystemFunction027=SystemFunction025 @524
-  SystemFunction028 @525 PRIVATE
-  SystemFunction029 @526 PRIVATE
-  SystemFunction030 @527
-  SystemFunction031=SystemFunction030 @528
-  SystemFunction032 @529
-  SystemFunction033 @530 PRIVATE
-  SystemFunction034 @531 PRIVATE
-  SystemFunction035 @532
-  SystemFunction036 @533
-  SystemFunction040 @534
-  SystemFunction041 @535
-  TraceEvent @536
-  TraceEventInstance @537 PRIVATE
-  TraceMessage @538
-  TraceMessageVa @539
-  TraceSetInformation @540
-  TreeResetNamedSecurityInfoW @541
-  UnlockServiceDatabase @542
-  UnregisterTraceGuids=ntdll.EtwUnregisterTraceGuids @543
-  UpdateTraceA @544 PRIVATE
-  UpdateTraceW @545 PRIVATE
-  WdmWmiServiceMain @546 PRIVATE
-  WmiCloseBlock @547 PRIVATE
-  WmiExecuteMethodA @548
-  WmiExecuteMethodW @549
-  WmiFreeBuffer @550
-  WmiMofEnumerateResourcesA @551
-  WmiMofEnumerateResourcesW @552
-  WmiNotificationRegistrationA @553
-  WmiNotificationRegistrationW @554
-  WmiOpenBlock @555
-  WmiQueryAllDataA @556
-  WmiQueryAllDataW @557
-  WmiQueryGuidInformation @558
-  WmiQuerySingleInstanceW @559 PRIVATE
-  WmiSetSingleInstanceA @560
-  WmiSetSingleInstanceW @561
-  WmiSetSingleItemA @562
-  WmiSetSingleItemW @563
-  WriteEncryptedFileRaw @564
+  InitiateShutdownA @242
+  InitiateShutdownW @243
+  InitiateSystemShutdownA @244
+  InitiateSystemShutdownExA @245
+  InitiateSystemShutdownExW @246
+  InitiateSystemShutdownW @247
+  InstallApplication @248 PRIVATE
+  IsProcessRestricted @249 PRIVATE
+  IsTextUnicode @250
+  IsTokenRestricted @251
+  IsValidAcl @252
+  IsValidSecurityDescriptor @253
+  IsValidSid @254
+  IsWellKnownSid @255
+  LockServiceDatabase @256
+  LogonUserA @257
+  LogonUserW @258
+  LookupAccountNameA @259
+  LookupAccountNameW @260
+  LookupAccountSidA @261
+  LookupAccountSidW @262
+  LookupPrivilegeDisplayNameA @263
+  LookupPrivilegeDisplayNameW @264
+  LookupPrivilegeNameA @265
+  LookupPrivilegeNameW @266
+  LookupPrivilegeValueA @267
+  LookupPrivilegeValueW @268
+  LookupSecurityDescriptorPartsA @269
+  LookupSecurityDescriptorPartsW @270
+  LsaAddAccountRights @271
+  LsaAddPrivilegesToAccount @272 PRIVATE
+  LsaClose @273
+  LsaCreateAccount @274 PRIVATE
+  LsaCreateSecret @275 PRIVATE
+  LsaCreateTrustedDomain @276 PRIVATE
+  LsaCreateTrustedDomainEx @277
+  LsaDelete @278 PRIVATE
+  LsaDeleteTrustedDomain @279
+  LsaEnumerateAccountRights @280
+  LsaEnumerateAccounts @281 PRIVATE
+  LsaEnumerateAccountsWithUserRight @282
+  LsaEnumeratePrivileges @283 PRIVATE
+  LsaEnumeratePrivilegesOfAccount @284 PRIVATE
+  LsaEnumerateTrustedDomains @285
+  LsaEnumerateTrustedDomainsEx @286
+  LsaFreeMemory @287
+  LsaGetSystemAccessAccount @288 PRIVATE
+  LsaICLookupNames @289 PRIVATE
+  LsaICLookupSids @290 PRIVATE
+  LsaLookupNames @291
+  LsaLookupNames2 @292
+  LsaLookupPrivilegeDisplayName @293
+  LsaLookupPrivilegeName @294
+  LsaLookupSids @295
+  LsaNtStatusToWinError @296
+  LsaOpenAccount @297 PRIVATE
+  LsaOpenPolicy @298
+  LsaOpenSecret @299 PRIVATE
+  LsaOpenTrustedDomain @300 PRIVATE
+  LsaOpenTrustedDomainByName @301
+  LsaQueryInfoTrustedDomain @302 PRIVATE
+  LsaQueryInformationPolicy @303
+  LsaQuerySecret @304 PRIVATE
+  LsaQueryTrustedDomainInfo @305
+  LsaQueryTrustedDomainInfoByName @306
+  LsaRegisterPolicyChangeNotification @307
+  LsaRemoveAccountRights @308
+  LsaRemovePrivilegesFromAccount @309 PRIVATE
+  LsaRetrievePrivateData @310
+  LsaSetInformationPolicy @311
+  LsaSetInformationTrustedDomain @312 PRIVATE
+  LsaSetSecret @313
+  LsaSetSystemAccessAccount @314 PRIVATE
+  LsaSetTrustedDomainInfoByName @315
+  LsaSetTrustedDomainInformation @316
+  LsaStorePrivateData @317
+  LsaUnregisterPolicyChangeNotification @318
+  MD4Final @319
+  MD4Init @320
+  MD4Update @321
+  MD5Final @322
+  MD5Init @323
+  MD5Update @324
+  MakeAbsoluteSD @325
+  MakeSelfRelativeSD @326
+  MapGenericMask @327
+  NotifyBootConfigStatus @328
+  NotifyChangeEventLog @329
+  NotifyServiceStatusChangeW @330
+  ObjectCloseAuditAlarmA @331
+  ObjectCloseAuditAlarmW @332
+  ObjectDeleteAuditAlarmW @333
+  ObjectOpenAuditAlarmA @334
+  ObjectOpenAuditAlarmW @335
+  ObjectPrivilegeAuditAlarmA @336
+  ObjectPrivilegeAuditAlarmW @337
+  OpenBackupEventLogA @338
+  OpenBackupEventLogW @339
+  OpenEncryptedFileRawA @340
+  OpenEncryptedFileRawW @341
+  OpenEventLogA @342
+  OpenEventLogW @343
+  OpenProcessToken @344
+  OpenSCManagerA @345
+  OpenSCManagerW @346
+  OpenServiceA @347
+  OpenServiceW @348
+  OpenThreadToken @349
+  OpenTraceA @350
+  OpenTraceW @351
+  PerfCreateInstance @352
+  PerfDeleteInstance @353
+  PerfSetCounterRefValue @354
+  PerfSetCounterSetInfo @355
+  PerfStartProvider @356
+  PerfStartProviderEx @357
+  PerfStopProvider @358
+  PrivilegeCheck @359
+  PrivilegedServiceAuditAlarmA @360
+  PrivilegedServiceAuditAlarmW @361
+  ProcessTrace @362
+  QueryAllTracesA @363
+  QueryAllTracesW @364
+  QueryServiceConfig2A @365
+  QueryServiceConfig2W @366
+  QueryServiceConfigA @367
+  QueryServiceConfigW @368
+  QueryServiceLockStatusA @369
+  QueryServiceLockStatusW @370
+  QueryServiceObjectSecurity @371
+  QueryServiceStatus @372
+  QueryServiceStatusEx @373
+  QueryTraceW @374
+  QueryWindows31FilesMigration @375
+  ReadEncryptedFileRaw @376
+  ReadEventLogA @377
+  ReadEventLogW @378
+  RegCloseKey @379
+  RegConnectRegistryA @380
+  RegConnectRegistryW @381
+  RegCopyTreeA @382
+  RegCopyTreeW @383
+  RegCreateKeyA @384
+  RegCreateKeyExA @385
+  RegCreateKeyExW @386
+  RegCreateKeyTransactedA @387
+  RegCreateKeyTransactedW @388
+  RegCreateKeyW @389
+  RegDeleteKeyA @390
+  RegDeleteKeyExA @391
+  RegDeleteKeyExW @392
+  RegDeleteKeyValueA @393
+  RegDeleteKeyValueW @394
+  RegDeleteKeyW @395
+  RegDeleteTreeA @396
+  RegDeleteTreeW @397
+  RegDeleteValueA @398
+  RegDeleteValueW @399
+  RegDisablePredefinedCache @400
+  RegDisableReflectionKey @401
+  RegEnumKeyA @402
+  RegEnumKeyExA @403
+  RegEnumKeyExW @404
+  RegEnumKeyW @405
+  RegEnumValueA @406
+  RegEnumValueW @407
+  RegFlushKey @408
+  RegGetKeySecurity @409
+  RegGetValueA @410
+  RegGetValueW @411
+  RegLoadAppKeyA @412
+  RegLoadAppKeyW @413
+  RegLoadKeyA @414
+  RegLoadKeyW @415
+  RegLoadMUIStringA @416
+  RegLoadMUIStringW @417
+  RegNotifyChangeKeyValue @418
+  RegOpenCurrentUser @419
+  RegOpenKeyA @420
+  RegOpenKeyExA @421
+  RegOpenKeyExW @422
+  RegOpenKeyW @423
+  RegOpenUserClassesRoot @424
+  RegOverridePredefKey @425
+  RegQueryInfoKeyA @426
+  RegQueryInfoKeyW @427
+  RegQueryMultipleValuesA @428
+  RegQueryMultipleValuesW @429
+  RegQueryReflectionKey @430
+  RegQueryValueA @431
+  RegQueryValueExA @432
+  RegQueryValueExW @433
+  RegQueryValueW @434
+  RegRemapPreDefKey @435 PRIVATE
+  RegReplaceKeyA @436
+  RegReplaceKeyW @437
+  RegRestoreKeyA @438
+  RegRestoreKeyW @439
+  RegSaveKeyA @440
+  RegSaveKeyExA @441
+  RegSaveKeyExW @442
+  RegSaveKeyW @443
+  RegSetKeySecurity @444
+  RegSetKeyValueA @445
+  RegSetKeyValueW @446
+  RegSetValueA @447
+  RegSetValueExA @448
+  RegSetValueExW @449
+  RegSetValueW @450
+  RegUnLoadKeyA @451
+  RegUnLoadKeyW @452
+  RegisterEventSourceA @453
+  RegisterEventSourceW @454
+  RegisterServiceCtrlHandlerA @455
+  RegisterServiceCtrlHandlerExA @456
+  RegisterServiceCtrlHandlerExW @457
+  RegisterServiceCtrlHandlerW @458
+  RegisterTraceGuidsA=ntdll.EtwRegisterTraceGuidsA @459
+  RegisterTraceGuidsW=ntdll.EtwRegisterTraceGuidsW @460
+  RegisterWaitChainCOMCallback @461
+  ReportEventA @462
+  ReportEventW @463
+  RevertToSelf @464
+  SaferCloseLevel @465
+  SaferComputeTokenFromLevel @466
+  SaferCreateLevel @467
+  SaferGetPolicyInformation @468
+  SaferIdentifyLevel @469
+  SaferSetLevelInformation @470
+  SetAclInformation @471
+  SetEntriesInAclA @472
+  SetEntriesInAclW @473
+  SetFileSecurityA @474
+  SetFileSecurityW @475
+  SetKernelObjectSecurity @476
+  SetNamedSecurityInfoA @477
+  SetNamedSecurityInfoW @478
+  SetPrivateObjectSecurity @479
+  SetSecurityDescriptorControl @480
+  SetSecurityDescriptorDacl @481
+  SetSecurityDescriptorGroup @482
+  SetSecurityDescriptorOwner @483
+  SetSecurityDescriptorSacl @484
+  SetSecurityInfo @485
+  SetServiceBits @486
+  SetServiceObjectSecurity @487
+  SetServiceStatus @488
+  SetThreadToken @489
+  SetTokenInformation @490
+  StartServiceA @491
+  StartServiceCtrlDispatcherA @492
+  StartServiceCtrlDispatcherW @493
+  StartServiceW @494
+  StartTraceA @495
+  StartTraceW @496
+  StopTraceA @497
+  StopTraceW @498
+  SynchronizeWindows31FilesAndWindowsNTRegistry @499
+  SystemFunction001 @500
+  SystemFunction002 @501
+  SystemFunction003 @502
+  SystemFunction004 @503
+  SystemFunction005 @504
+  SystemFunction006 @505
+  SystemFunction007 @506
+  SystemFunction008 @507
+  SystemFunction009 @508
+  SystemFunction010 @509
+  SystemFunction011=SystemFunction010 @510
+  SystemFunction012 @511
+  SystemFunction013 @512
+  SystemFunction014=SystemFunction012 @513
+  SystemFunction015=SystemFunction013 @514
+  SystemFunction016=SystemFunction012 @515
+  SystemFunction017=SystemFunction013 @516
+  SystemFunction018=SystemFunction012 @517
+  SystemFunction019=SystemFunction013 @518
+  SystemFunction020=SystemFunction012 @519
+  SystemFunction021=SystemFunction013 @520
+  SystemFunction022=SystemFunction012 @521
+  SystemFunction023=SystemFunction013 @522
+  SystemFunction024 @523
+  SystemFunction025 @524
+  SystemFunction026=SystemFunction024 @525
+  SystemFunction027=SystemFunction025 @526
+  SystemFunction028 @527 PRIVATE
+  SystemFunction029 @528 PRIVATE
+  SystemFunction030 @529
+  SystemFunction031=SystemFunction030 @530
+  SystemFunction032 @531
+  SystemFunction033 @532 PRIVATE
+  SystemFunction034 @533 PRIVATE
+  SystemFunction035 @534
+  SystemFunction036 @535
+  SystemFunction040 @536
+  SystemFunction041 @537
+  TraceEvent @538
+  TraceEventInstance @539 PRIVATE
+  TraceMessage @540
+  TraceMessageVa @541
+  TraceSetInformation @542
+  TreeResetNamedSecurityInfoW @543
+  UnlockServiceDatabase @544
+  UnregisterTraceGuids=ntdll.EtwUnregisterTraceGuids @545
+  UpdateTraceA @546 PRIVATE
+  UpdateTraceW @547 PRIVATE
+  WdmWmiServiceMain @548 PRIVATE
+  WmiCloseBlock @549 PRIVATE
+  WmiExecuteMethodA @550
+  WmiExecuteMethodW @551
+  WmiFreeBuffer @552
+  WmiMofEnumerateResourcesA @553
+  WmiMofEnumerateResourcesW @554
+  WmiNotificationRegistrationA @555
+  WmiNotificationRegistrationW @556
+  WmiOpenBlock @557
+  WmiQueryAllDataA @558
+  WmiQueryAllDataW @559
+  WmiQueryGuidInformation @560
+  WmiQuerySingleInstanceW @561 PRIVATE
+  WmiSetSingleInstanceA @562
+  WmiSetSingleInstanceW @563
+  WmiSetSingleItemA @564
+  WmiSetSingleItemW @565
+  WriteEncryptedFileRaw @566

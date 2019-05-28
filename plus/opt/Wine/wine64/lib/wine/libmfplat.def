@@ -25,14 +25,14 @@ EXPORTS
   MFAllocateWorkQueueEx @20
   MFAppendCollection @21 PRIVATE
   MFAverageTimePerFrameToFrameRate @22 PRIVATE
-  MFBeginCreateFile @23 PRIVATE
+  MFBeginCreateFile @23
   MFBeginGetHostByName @24 PRIVATE
   MFBeginRegisterWorkQueueWithMMCSS @25 PRIVATE
   MFBeginUnregisterWorkQueueWithMMCSS @26 PRIVATE
   MFBlockThread @27 PRIVATE
   MFCalculateBitmapImageSize @28 PRIVATE
   MFCalculateImageSize @29
-  MFCancelCreateFile @30 PRIVATE
+  MFCancelCreateFile @30
   MFCancelWorkItem @31
   MFCompareFullToPartialMediaType @32
   MFCompareSockaddrAddresses @33 PRIVATE
@@ -84,7 +84,7 @@ EXPORTS
   MFDeserializeEvent @79 PRIVATE
   MFDeserializeMediaTypeFromStream @80 PRIVATE
   MFDeserializePresentationDescriptor @81 PRIVATE
-  MFEndCreateFile @82 PRIVATE
+  MFEndCreateFile @82
   MFEndGetHostByName @83 PRIVATE
   MFEndRegisterWorkQueueWithMMCSS @84 PRIVATE
   MFEndUnregisterWorkQueueWithMMCSS @85 PRIVATE

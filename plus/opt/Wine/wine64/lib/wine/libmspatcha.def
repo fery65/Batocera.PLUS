@@ -4,14 +4,18 @@ LIBRARY mspatcha.dll
 
 EXPORTS
   ApplyPatchToFileA @1
-  ApplyPatchToFileByHandles @2 PRIVATE
-  ApplyPatchToFileByHandlesEx @3 PRIVATE
-  ApplyPatchToFileExA @4 PRIVATE
-  ApplyPatchToFileExW @5 PRIVATE
-  ApplyPatchToFileW @6
-  GetFilePatchSignatureA @7
-  GetFilePatchSignatureByHandle @8 PRIVATE
-  GetFilePatchSignatureW @9
-  TestApplyPatchToFileA @10 PRIVATE
-  TestApplyPatchToFileByHandles @11 PRIVATE
-  TestApplyPatchToFileW @12 PRIVATE
+  ApplyPatchToFileByBuffers @2
+  ApplyPatchToFileByHandles @3
+  ApplyPatchToFileByHandlesEx @4
+  ApplyPatchToFileExA @5
+  ApplyPatchToFileExW @6
+  ApplyPatchToFileW @7
+  GetFilePatchSignatureA @8
+  GetFilePatchSignatureByBuffer @9
+  GetFilePatchSignatureByHandle @10
+  GetFilePatchSignatureW @11
+  NormalizeFileForPatchSignature @12
+  TestApplyPatchToFileA @13
+  TestApplyPatchToFileByBuffers @14
+  TestApplyPatchToFileByHandles @15
+  TestApplyPatchToFileW @16

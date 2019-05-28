@@ -3,25 +3,25 @@
 LIBRARY hal.dll
 
 EXPORTS
-  ExAcquireFastMutex@4=__fastcall_ExAcquireFastMutex @1
-  ExReleaseFastMutex@4=__fastcall_ExReleaseFastMutex @2
-  ExTryToAcquireFastMutex@4=__fastcall_ExTryToAcquireFastMutex @3
+  ExAcquireFastMutex@4 @1
+  ExReleaseFastMutex@4 @2
+  ExTryToAcquireFastMutex@4 @3
   HalClearSoftwareInterrupt@0 @4 PRIVATE
   HalRequestSoftwareInterrupt@0 @5 PRIVATE
   HalSystemVectorDispatchEntry@0 @6 PRIVATE
-  KeAcquireInStackQueuedSpinLock@8=__fastcall_KeAcquireInStackQueuedSpinLock @7
+  KeAcquireInStackQueuedSpinLock@8 @7
   KeAcquireInStackQueuedSpinLockRaiseToSynch@0 @8 PRIVATE
   KeAcquireQueuedSpinLock@0 @9 PRIVATE
   KeAcquireQueuedSpinLockRaiseToSynch@0 @10 PRIVATE
   KeAcquireSpinLockRaiseToSynch@0 @11 PRIVATE
-  KeReleaseInStackQueuedSpinLock@4=__fastcall_KeReleaseInStackQueuedSpinLock @12
+  KeReleaseInStackQueuedSpinLock@4 @12
   KeReleaseQueuedSpinLock@0 @13 PRIVATE
   KeTryToAcquireQueuedSpinLock@0 @14 PRIVATE
   KeTryToAcquireQueuedSpinLockRaiseToSynch@0 @15 PRIVATE
-  KfAcquireSpinLock@4=__fastcall_KfAcquireSpinLock @16
-  KfLowerIrql@4=__fastcall_KfLowerIrql @17
-  KfRaiseIrql@4=__fastcall_KfRaiseIrql @18
-  KfReleaseSpinLock@8=__fastcall_KfReleaseSpinLock @19
+  KfAcquireSpinLock@4 @16
+  KfLowerIrql@4 @17
+  KfRaiseIrql@4 @18
+  KfReleaseSpinLock@8 @19
   HalAcquireDisplayOwnership@0 @20 PRIVATE
   HalAdjustResourceList@0 @21 PRIVATE
   HalAllProcessorsStarted@0 @22 PRIVATE

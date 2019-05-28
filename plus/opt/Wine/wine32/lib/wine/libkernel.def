@@ -159,27 +159,30 @@ EXPORTS
   GetExeVersion16@0 @154
   GetExpWinVer16@4 @155
   GetModuleHandle16@4 @156
-  GlobalReAlloc16@12 @157
-  InitTask16@4 @158
-  IsBadReadPtr16@8 @159
-  IsTask16@4 @160
-  LoadModule16@8 @161
-  LoadResource16@8 @162
-  LocalAlloc16@8 @163
-  LocalInit16@12 @164
-  LocalLock16@4 @165
-  LocalUnlock16@4 @166
-  LocalReAlloc16@12 @167
-  LocalFree16@4 @168
-  LocalSize16@4 @169
-  LocalCompact16@4 @170
-  LocalCountFree16@0 @171
-  LocalHeapSize16@0 @172
-  LockResource16@4 @173
-  SetSelectorBase@8 @174
-  SetSelectorLimit16@8 @175
-  SizeofResource16@8 @176
-  WinExec16@8 @177
-  __wine_call_int_handler @178
-  __wine_vxd_open @179 PRIVATE
-  __wine_vxd_get_proc @180 PRIVATE
+  GetSelectorBase@4 @157
+  GetSelectorLimit16@4 @158
+  GlobalReAlloc16@12 @159
+  InitTask16@4 @160
+  IsBadReadPtr16@8 @161
+  IsTask16@4 @162
+  LoadModule16@8 @163
+  LoadResource16@8 @164
+  LocalAlloc16@8 @165
+  LocalInit16@12 @166
+  LocalLock16@4 @167
+  LocalUnlock16@4 @168
+  LocalReAlloc16@12 @169
+  LocalFree16@4 @170
+  LocalSize16@4 @171
+  LocalCompact16@4 @172
+  LocalCountFree16@0 @173
+  LocalHeapSize16@0 @174
+  LockResource16@4 @175
+  PrestoChangoSelector16@8 @176
+  SetSelectorBase@8 @177
+  SetSelectorLimit16@8 @178
+  SizeofResource16@8 @179
+  WinExec16@8 @180
+  __wine_call_int_handler @181
+  __wine_vxd_open @182 PRIVATE
+  __wine_vxd_get_proc @183 PRIVATE

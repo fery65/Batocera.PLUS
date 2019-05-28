@@ -43,7 +43,7 @@ EXPORTS
   HidP_SetScaledUsageValue@0 @38 PRIVATE
   HidP_SetUsageValue@32 @39
   HidP_SetUsageValueArray@0 @40 PRIVATE
-  HidP_SetUsages@0 @41 PRIVATE
+  HidP_SetUsages@32 @41
   HidP_TranslateUsagesToI8042ScanCodes@24 @42
   HidP_UnsetUsages@0 @43 PRIVATE
   HidP_UsageListDifference@0 @44 PRIVATE
