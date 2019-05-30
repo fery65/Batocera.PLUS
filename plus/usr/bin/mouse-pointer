@@ -1,0 +1,77 @@
+#!/bin/sh
+##
+ # Batocera.PLUS
+ # Ativa e desativa o ponteiro do mouse
+ # Autor: Alexandre Freire dos Santos
+ # Email: alexxandre.freire@gmail.com
+ ##
+
+################################################################################
+
+##
+ # Exibe o ponteiro do mouse.
+ ##
+function mouseOn() {
+    if ! [ -f '/tmp/mouse_pointer_keys' ]; then
+        matchbox-remote -s
+        matchbox-remote -s
+        matchbox-remote -s
+        touch '/tmp/mouse_pointer_keys'
+    fi
+    echo 'on'
+}
+
+################################################################################
+
+##
+ # Aculta o ponteiro do mouse
+ ##
+function mouseOff() {
+    if [ -f '/tmp/mouse_pointer_keys' ]; then
+        matchbox-remote -h
+        matchbox-remote -h
+        rm '/tmp/mouse_pointer_keys'
+    fi
+    echo 'off'
+}
+
+
+################################################################################
+
+##
+ # Exibe ou aculta o ponteiro do mouse.
+ # Se o ponteiro estiver mostrando oculta, se estiver ouculto exibe.
+ ##
+function mouseOnOff() {
+    if ! [ -f '/tmp/mouse_pointer_keys' ]; then
+        mouseOn
+    else
+        mouseOff
+    fi
+}
+
+################################################################################
+
+case $1 in
+    on)
+        echo -n 'mouse pointer '
+        mouseOn
+        ;;
+    off)
+        echo -n 'mouse pointer '
+        mouseOff
+        ;;
+    invert)
+        echo -n 'mouse pointer '
+        mouseOnOff
+        ;;
+    *)
+        echo 'Use mouse-mointer on     [ enable mouse pointer ]'
+        echo 'Use mouse-mointer off    [ disable mouse pointer ]'
+        echo 'Use mouse-mointer invert [ invert mouse pointer state ]'
+        ;;
+esac
+
+exit 0
+
+################################################################################
