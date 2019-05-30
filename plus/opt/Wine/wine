@@ -85,6 +85,10 @@ done
 
 sleep 1
 
+# Remove arquivos temporários usados na instação do mono e gecko.
+rm "${WINE_HOME}/wine${WINE_ARCH}/drive_c/windows/Installer/"*
+
+
 ################################################################################
 
 ### CONFIGURAÇÃO BÁSICA
