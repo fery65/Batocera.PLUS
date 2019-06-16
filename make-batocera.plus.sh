@@ -1,18 +1,17 @@
 #!/bin/sh
 ################################################################################
-#exit 0
 
 # Versão do Batocera.PLUS.
-VERSION='3.80'
+VERSION='4.01'
 
 # Pasta temporária em uma partição Linux.
-#TEMP_DIR='tmp'
-TEMP_DIR='/media/NO_LABEL/tmp'
+TEMP_DIR='tmp'
+#TEMP_DIR='/media/NO_LABEL/tmp'
 #TEMP_DIR='/media/NO_LABEL_1/tmp'
 
 # Imagem oficial do batocera.linux.
-IMG_OFICIAL='img/batocera-5.21-x86_64-20190326.img.gz'
-IMG_ZERO='img/BatoceraZero2GB.7z'
+IMG_OFICIAL='img/batocera-5.22-x86_64-20190609.img.gz'
+IMG_ZERO='img/BatoceraZero3GB.7z'
 
 # Arquivos extras do Batocera.PLUS.
 PLUS_DIR='plus'
@@ -42,10 +41,9 @@ echo 'Descompactando arquivo squashfs...'
 unsquashfs -d "$TEMP_DIR/squashfs-root" "$TEMP_DIR/BATOCERA/boot/batocera" || exit $?
 
 echo 'Removendo arquivos desnecessários...'
-rm -r "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/.emulationstation/themes/recalbox" || exit $?
-rm -r "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/.emulationstation/themes/batocera-light" || exit $?
 rm -r "$TEMP_DIR/squashfs-root/usr/share/icons/Adwaita" || exit $?
 
+rm    "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/roms/c64/super_mario_bros_64_-_zeropaige.zip"  || exit $?
 rm    "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/roms/c64/The_Great_Giana_Sisters.d64" || exit $?
 rm    "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/roms/gba/SpaceTwins.gba" || exit $?
 rm    "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/roms/nes/2048 (tsone).nes" || exit $?
@@ -69,8 +67,7 @@ mv    "$TEMP_DIR/squashfs-root/etc/init.d/S10triggerhappy" "$TEMP_DIR/squashfs-r
 echo 'Desativando atualizações automáticas...'
 sed -i s/'https:\/\/batocera-linux.xorhub.com\/upgrades//' "$TEMP_DIR/squashfs-root/recalbox/scripts/recalbox-config.sh"                       || exit $?
 sed -i s/'https:\/\/batocera-linux.xorhub.com\/upgrades//' "$TEMP_DIR/squashfs-root/recalbox/scripts/recalbox-upgrade.sh"                      || exit $?
-sed -i s/'^updates.enabled=1/updates.enabled=0/'           "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/recalbox.conf"          || exit $?
-sed -i s/'^updates.enabled=1/updates.enabled=0/'           "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/recalbox.conf.template" || exit $?
+sed -i s/'^updates.enabled=1/updates.enabled=0/'           "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/batocera.conf"          || exit $?
 
 echo 'Aumentando o tamanho do arquivo overlay...'
 sed -i s/'^OVERLAYSIZE=.*/OVERLAYSIZE=128 # M/'            "$TEMP_DIR/squashfs-root/recalbox/scripts/recalbox-save-overlay.sh" || exit $?
@@ -79,8 +76,8 @@ echo 'Resolvendo o bug do PC não desligar / reiniciar...'
 sed -i s/'^shd2:06:wait:\/bin\/umount -a -r -f/shd2:06:wait:\/bin\/umount -a -r/' "$TEMP_DIR/squashfs-root/etc/inittab"  || exit $?
 
 echo 'Fazendo backup do arquivo es_systems.cfg...'
-mv    "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg" \
-      "$TEMP_DIR/squashfs-root/usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg.original" || exit $?
+mv    "$TEMP_DIR/squashfs-root/usr/share/emulationstation/es_systems.cfg" \
+      "$TEMP_DIR/squashfs-root/usr/share/emulationstation/es_systems.cfg.original" || exit $?
 
 echo 'Criando arquivo de versão...'
 mv   "$TEMP_DIR/squashfs-root/usr/share/batocera/batocera.version" "$TEMP_DIR/squashfs-root/usr/share/batocera/recalbox.version" || exit $?
@@ -96,13 +93,9 @@ sed -i s'/^create mask = 0600/create mask = 0700/' "$TEMP_DIR/squashfs-root/etc/
 echo 'Copiando arquivos do batocera.plus...'
 cp -r -f "$PLUS_DIR/"* "$TEMP_DIR/squashfs-root"  || exit $?
 
-echo 'Descompactando Libretro mame...'
-7zr x -aoa "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro"  || exit $?
-rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame_libretro.so.7z."*
-
 echo 'Descompactando Libretro mame0200...'
-7zr x "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro" || exit $?
-rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z."*
+###7zr x "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro" || exit $?
+###rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z."*
 
 echo 'Descompactando Firefox libxul.so...'
 7zr x "$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr/libxul.so.7z" -o"$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr" || exit $?
@@ -132,8 +125,9 @@ echo 'Copiando arquivos extras para o Batocera.PLUS...'
 cp -r -f "$BOOT_DIR/"* "$TEMP_DIR/BatoceraZero" || exit $?
 
 echo 'Adicionando opção de resolução em recalbox-boot.conf'
-echo '#Open a terminal (Win + F2) type xrandr to see all supported resolutions.' >> "$TEMP_DIR/BatoceraZero/recalbox-boot.conf" || exit $?
-echo '#resolution=1280x720x60'                                                   >> "$TEMP_DIR/BatoceraZero/recalbox-boot.conf" || exit $?
+echo ''                                                                          >> "$TEMP_DIR/BatoceraZero/batocera-boot.conf" || exit $?
+echo '#Open a terminal (Win + F2) type xrandr to see all supported resolutions.' >> "$TEMP_DIR/BatoceraZero/batocera-boot.conf" || exit $?
+echo '#resolution=1280x720x60'                                                   >> "$TEMP_DIR/BatoceraZero/batocera-boot.conf" || exit $?
 
 echo 'Desmontando imagens...'
 umount /dev/loop7 || exit $?

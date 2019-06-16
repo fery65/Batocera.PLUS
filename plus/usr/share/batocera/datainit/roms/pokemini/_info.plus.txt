@@ -1,4 +1,4 @@
 ## SYSTEM POKEMON MINI ##
 -------------------------------------------------------------------------------
-ROM files extensions accepted (Batocera.PLUS): ".zip .ZIP .min .MIN"
+ROM files extensions accepted (Batocera.PLUS): ".min .MIN .zip .ZIP"
 -------------------------------------------------------------------------------

@@ -55,7 +55,7 @@ cat << EOF
     WIN + F5        = THIS HELP
 
     F1              = FILE EXPLORER
-    WIN  + F2       = OPEN A TERMINAL
+    WIN  + F4       = OPEN A TERMINAL
     WIN  + F10      = OPEN THE MOZILLA FIREFOX BROWSER
     CTRL + ALT + F3 = OPEN COMMAND LINE LINUX (user: root | password: linux)
 
@@ -72,10 +72,9 @@ cat << EOF
     CTRL + ALT + F4 = OPEN VOLUME MIXER
 
     WIN  + F3       = MOUSE POINTER ON / OFF
+
     ALT  + TAB      = TOGGLES BETWEEN WINDOWS
-    ALT  + N        = SAME AS ALT + TAB
-    ALT  + P        = SAME AS ALT + TAB (inverted)
-    ALT  + C        = CLOSE WINDOWN (same as alt + f4)
+    ALT  + F4       = CLOSE WINDOWN
     ALT  + Q        = CLOSE SOME WINDOWS (pcmanfm, leafpad, firefox, etc...)
     ALT  + W        = CLOSE POP-UP WINDOW (FireFox)
 

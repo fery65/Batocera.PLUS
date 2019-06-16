@@ -8,10 +8,12 @@
 
 ################################################################################
 
-matchbox-window-manager -use_cursor no -use_titlebar no -use_desktop_mode no -use_lowlight no &
+# hide mouse cursor
+unclutter --timeout 1 -b
+
+systemsetting="python /usr/lib/python2.7/site-packages/configgen/settings/batoceraSettings.py"
 
 # set the keyboard
-systemsetting="python /usr/lib/python2.7/site-packages/configgen/settings/recalboxSettings.py"
 settings_lang="`$systemsetting -command load -key system.language`"
 
 # not always true (en_US for us), but it's really better than always english
@@ -22,20 +24,19 @@ setxkbmap "${map_name}"
 xset -dpms
 xset s off
 
+# environment
 export HOME=/userdata/system
 export LC_ALL="${settings_lang}.UTF-8"
 export LANG=${LC_ALL}
 
-# because of xinerama braking es, enable only one screen at a time
-systemsetting="python /usr/lib/python2.7/site-packages/configgen/settings/recalboxSettings.py"
+# because of xinerama breaking es, enable only one screen at a time
 settings_output="`$systemsetting -command load -key global.videooutput`"
 batocera-resolution setOutput "${settings_output}" # empty or invalid values defaults to the first valid
-#/recalbox/scripts/recalbox-config.sh setoutput "${settings_output}"
-#/recalbox/scripts/recalbox-config.sh setoutput 'HDMI-1'
+#batocera-resolution setoutput 'HDMI-1' # 
 
-batocera-resolution minTomaxResolution
-
-################################################################################
+# dpi override for nvidia gpus
+settings_output="`$systemsetting -command load -key global.dpi`"
+[ ! -z "${settings_output}" ] && batocera-resolution setDPI "${settings_output}"
 
 ## CUSTOMISATIONS ###
 # to customize your display, you can copy this file to ~/.xinitrc and then modify it
@@ -63,15 +64,22 @@ batocera-resolution minTomaxResolution
 #xrandr -r 60 -s 1440x900
 #xrandr -r 60 -s 1600x900
 
+# set user desired resolution
+# nice workaround for displays which tell X11 to use strange resolutions
+settings_output="`$systemsetting -command load -key global.videomode`"
+[ ! -z "${settings_output}" ] && batocera-resolution setMode "${settings_output}"
+
+batocera-resolution minTomaxResolution
+
 ################################################################################
 
-### Usa a resolução especificada no arquivo /boot/recalbox-boot.conf
+### Usa a resolução especificada no arquivo /boot/	recalbox-boot.conf
 
-if [ "$(cat /boot/recalbox-boot.conf | grep ^resolution)" ]; then
-    xRes="$(cat /boot/recalbox-boot.conf | grep ^resolution | cut -d '=' -f 2 | cut -d 'x' -f 1)"
-    yRes="$(cat /boot/recalbox-boot.conf | grep ^resolution | cut -d '=' -f 2 | cut -d 'x' -f 2)"
-    Freq="$(cat /boot/recalbox-boot.conf | grep ^resolution | cut -d '=' -f 2 | cut -d 'x' -f 3)"
-    xrandr -r $Freq -s "$(echo $xRes)x$(echo $yRes)"
+if [ "$(cat /boot/batocera-boot.conf | grep ^resolution)" ]; then
+    xRes="$(cat /boot/batocera-boot.conf | grep ^resolution | cut -d '=' -f 2 | cut -d 'x' -f 1)"
+    yRes="$(cat /boot/batocera-boot.conf | grep ^resolution | cut -d '=' -f 2 | cut -d 'x' -f 2)"
+    Freq="$(cat /boot/batocera-boot.conf | grep ^resolution | cut -d '=' -f 2 | cut -d 'x' -f 3)"
+    xrandr -r $Freq -s "${xRes}x${yRes}"
 fi
 
 ################################################################################
@@ -85,7 +93,7 @@ xset s off
 
 ### Resolve o bug de não identificar o teclado PT-BR ABNT2
 
-if [ "$(cat $HOME/recalbox.conf | grep system.language=pt_BR)" ]; then
+if [ "$(cat $HOME/batocera.conf | grep system.language=pt_BR)" ]; then
     setxkbmap -model abnt2 -layout br -variant ,abnt2 &
 fi
 
@@ -93,8 +101,8 @@ fi
 
 ### Imagem de carregamento alternativa.
 
-if [ -f "$HOME/.emulationstation/es_settings.cfg" ]; then
-    THEME_NAME="$(cat "$HOME/.emulationstation/es_settings.cfg" | grep '<string name="ThemeSet" value=' | cut -d '"' -f 4)"
+if [ -f "$HOME/configs/emulationstation/es_settings.cfg" ]; then
+    THEME_NAME="$(cat "$HOME/configs/emulationstation/es_settings.cfg" | grep '<string name="ThemeSet" value=' | cut -d '"' -f 4)"
     if ! [ "$THEME_NAME" ]; then
         THEME_NAME='batocera-plus'
     fi
@@ -102,50 +110,54 @@ else
     THEME_NAME='batocera-plus'
 fi
 
-if [ -d "$HOME/.emulationstation/themes/$THEME_NAME" ]; then
-    THEME_DIR="$HOME/.emulationstation/themes/$THEME_NAME"
-elif [ -d "/usr/share/batocera/datainit/system/.emulationstation/themes/$THEME_NAME" ]; then
-    THEME_DIR="/usr/share/batocera/datainit/system/.emulationstation/themes/$THEME_NAME"
+if [ -d "$HOME/themes/$THEME_NAME" ]; then
+    THEME_DIR="$HOME/themes/$THEME_NAME"
+elif [ -d "/etc/emulationstation/themes/$THEME_NAME" ]; then
+    THEME_DIR="/etc/emulationstation/themes/$THEME_NAME"
 else
-    THEME_DIR='/usr/share/batocera/datainit/system/.emulationstation/themes/batocera-plus'
+    THEME_DIR='/etc/emulationstation/themes/batocera-plus'
 fi
 
 if [ -f "$THEME_DIR/loadscreen/startscreen.png" ]; then
     START_SCREEN="$THEME_DIR/loadscreen/startscreen.png"
 elif [ -f "$THEME_DIR/loadscreen/startscreen.jpg" ]; then
     START_SCREEN="$THEME_DIR/loadscreen/startscreen.jpg"
-else
-    START_SCREEN='/usr/share/batocera/datainit/system/.emulationstation/themes/batocera-plus/loadscreen/startscreen.png'
+elif [ "/etc/emulationstation/themes/batocera-plus/loadscreen/startscreen.png" ]; then
+    START_SCREEN='/etc/emulationstation/themes/batocera-plus/loadscreen/startscreen.png'
+elif [ "/etc/emulationstation/themes/batocera-plus/loadscreen/startscreen.jpg" ]; then
+    START_SCREEN='/etc/emulationstation/themes/batocera-plus/loadscreen/startscreen.jpg'
 fi
 
 while [ true ]; do
-    # Aguarda o emulationstation entrar em execução para executar o retroarch.
+
+    # Aguarda o emulationstation entrar em execução para exibir a tela de carregamento.
     if [ "$(pidof emulationstation)" ]; then
-        nice -n -1 /usr/bin/retroarch -L '/usr/lib/libretro/imageviewer_libretro.so' --config '/usr/share/batocera/datainit/system/configs/retroarch/retroarchcustom.cfg' \
-        "$START_SCREEN" &
+        nice -n -19 retroarch \
+            -L '/usr/lib/libretro/imageviewer_libretro.so' \
+            --config '/usr/share/batocera/datainit/system/configs/retroarch/retroarchcustom.cfg' \
+            "$START_SCREEN" &
+        sleep 3.5
+
+        # Interrompe a tela de carregamento quando o emulationstation terminar o loading.
+        while [ true ]; do
+            sleep 0.5
+            if [ -f '/tmp/emulationstation.ready' ]; then
+                killall retroarch
+
+                ### Inicia com o favoritos selecionado
+                ### Ex: xSendKey left enter
+                sleep 0.2
+                xSendKey left
+
+                break
+            fi
+        done
         break
     fi
+    sleep 0.2
 done &
 
 ################################################################################
 
-### Interrompe a tela de carregamento quando o emulationstation terminar o loading.
-
-while [ true ]; do
-    sleep 0.5
-    if [ -f '/tmp/emulationstation.ready' ]; then
-        killall retroarch
-
-        ### Inicia com o favoritos selecionado
-        ### Ex: xSendKey left enter
-        sleep 0.2
-        xSendKey left
-
-        break
-    fi
-done &
-
-################################################################################
-
-# without windowed, time must be sleeped to wait that matchbox ended to initialize :-(
-exec emulationstation --windowed
+cd /userdata # es needs a PWD
+openbox --config-file /etc/openbox/rc.xml --startup "emulationstation --windowed --no-splash"

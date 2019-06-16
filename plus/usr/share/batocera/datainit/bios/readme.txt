@@ -117,6 +117,8 @@ NeoGeo:
 NeoGeo CD:
  bios/neogeo.zip
  bios/neocdz.zip
+ bios/ng-lo.rom
+ bios/neocd_z.rom
 f39572af7584cb5b3f70ae8cc848aba2 bios/neocd-cdz.bin
 5c2366f25ff92d71788468ca492ebeca bios/neocd-front-load.bin
 122aee210324c72e8a11116e6ef9c0d0 bios/neocd-top-load.bin

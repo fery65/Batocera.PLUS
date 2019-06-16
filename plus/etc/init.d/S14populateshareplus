@@ -14,6 +14,7 @@ SHARE_INIT='/usr/share/batocera/datainit'
 ### Pastas adicionais
 mkdir -p "$SHARE/downloads"
 mkdir -p "$SHARE/system/.local/share/Trash/files"
+mkdir -p "$SHARE/system/configs/wine"
 
 ### Arquivo de auto execução personalizado pelo usuário.
 if ! [ -f "$SHARE/system/custom.sh" ]; then

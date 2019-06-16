@@ -14,6 +14,10 @@ BATOCERA_VERSION='/usr/share/batocera/batocera.version'
 RECALBOX_VERSION='/usr/share/batocera/recalbox.version'
 RECALBOX_ARCH='/usr/share/batocera/batocera.arch'
 
+# Resolve o bug introduzido no batocera 5.22 com glibc.
+# Remova esta linha quando o bug for resolvido.
+export LC_ALL=C
+
 clear
 echo
 echo 'BATOCERA.PLUS BY ALEXANDRE FREIRE DOS SANTOS'

@@ -136,14 +136,16 @@ systems = {
 
 
     # SNK
-    "neogeo":   { "name": "NeoGeo", "biosFiles":   [ { "md5": "", "file": "roms/neogeo/neogeo.zip" } ] },
-    "neogeocd": { "name": "NeoGeoCD", "biosFiles": [ { "md5": "f39572af7584cb5b3f70ae8cc848aba2", "file": "bios/neocd-cdz.bin" },
+    #"neogeo":   { "name": "NeoGeo", "biosFiles":   [ { "md5": "", "file": "roms/neogeo/neogeo.zip" } ] },
+    "neogeo":   { "name": "NeoGeo", "biosFiles":   [ { "md5": "", "file": "bios/neogeo.zip" } ] },
+    "neogeocd": { "name": "NeoGeoCD", "biosFiles": [ { "md5": "f39572af7584cb5b3f70ae8cc848aba2", "file": "bios/neocd-cdz.bin"        },
                                                      { "md5": "5c2366f25ff92d71788468ca492ebeca", "file": "bios/neocd-front-load.bin" },
-                                                     { "md5": "122aee210324c72e8a11116e6ef9c0d0", "file": "bios/neocd-top-load.bin" },
-                                                     { "md5": "a147aeab5edeb1a9b652e7fb640f5bb3", "file": "bios/neocd-unibios.bin" },
-                                                     { "md5": "",                                 "file": "bios/neocdz.zip" },
-                                                     { "md5": "",                                 "file": "bios/neogeo.zip" },] },
-
+                                                     { "md5": "122aee210324c72e8a11116e6ef9c0d0", "file": "bios/neocd-top-load.bin"   },
+                                                     { "md5": "a147aeab5edeb1a9b652e7fb640f5bb3", "file": "bios/neocd-unibios.bin"    },
+                                                     { "md5": "",                                 "file": "bios/neocdz.zip"           },
+                                                     { "md5": "",                                 "file": "bios/neogeo.zip"           },
+                                                     { "md5": "",                                 "file": "bios/ng-lo.rom"            },
+                                                     { "md5": "",                                 "file": "bios/neocd_z.rom"          } ] },
 
     # Sony Computer Entertainment
     "psx": { "name": "PSX", "biosFiles": [ { "md5": "8dd7d5296a650fac7319bce665a6a53c", "file": "bios/scph5500.bin"   },

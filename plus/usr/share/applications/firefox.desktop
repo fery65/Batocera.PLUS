@@ -6,4 +6,4 @@ Terminal=false
 Type=Application
 Categories=web;batocera.linux;
 Name=firefox
-NoDisplay=true
+NoDisplay=false

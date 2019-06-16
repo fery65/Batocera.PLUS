@@ -13,40 +13,38 @@
  ##
 function mouseOn() {
     if ! [ -f '/tmp/mouse_pointer_keys' ]; then
-        matchbox-remote -s
-        matchbox-remote -s
-        matchbox-remote -s
-        touch '/tmp/mouse_pointer_keys'
+        if ! [ "$(pidof unclutter)" ]; then
+            unclutter --timeout 1 -b &
+        fi
     fi
-    echo 'on'
+    touch '/tmp/mouse_pointer_keys'
 }
 
 ################################################################################
 
 ##
- # Aculta o ponteiro do mouse
+ # Oculta o ponteiro do mouse
  ##
 function mouseOff() {
     if [ -f '/tmp/mouse_pointer_keys' ]; then
-        matchbox-remote -h
-        matchbox-remote -h
-        rm '/tmp/mouse_pointer_keys'
+        if [ "$(pidof unclutter)" ]; then
+            killall unclutter &
+        fi
     fi
-    echo 'off'
+    rm '/tmp/mouse_pointer_keys'
 }
-
 
 ################################################################################
 
 ##
- # Exibe ou aculta o ponteiro do mouse.
- # Se o ponteiro estiver mostrando oculta, se estiver ouculto exibe.
+ # Exibe ou oculta o ponteiro do mouse.
+ # Se o ponteiro estiver mostrando oculta, se estiver oculto exibe.
  ##
 function mouseOnOff() {
-    if ! [ -f '/tmp/mouse_pointer_keys' ]; then
-        mouseOn
-    else
+    if [ -f '/tmp/mouse_pointer_keys' ]; then
         mouseOff
+    else
+        mouseOn
     fi
 }
 
@@ -54,21 +52,18 @@ function mouseOnOff() {
 
 case $1 in
     on)
-        echo -n 'mouse pointer '
         mouseOn
         ;;
     off)
-        echo -n 'mouse pointer '
         mouseOff
         ;;
     invert)
-        echo -n 'mouse pointer '
         mouseOnOff
         ;;
     *)
-        echo 'Use mouse-mointer on     [ enable mouse pointer ]'
-        echo 'Use mouse-mointer off    [ disable mouse pointer ]'
-        echo 'Use mouse-mointer invert [ invert mouse pointer state ]'
+        echo 'mouse-mointer on     [ enable mouse pointer ]'
+        echo 'mouse-mointer off    [ disable mouse pointer ]'
+        echo 'mouse-mointer invert [ invert mouse pointer state ]'
         ;;
 esac
 

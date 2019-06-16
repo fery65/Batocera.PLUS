@@ -2,16 +2,24 @@
 -------------------------------------------------------------------------------
 ROM files extensions accepted (Batocera.PLUS): ".plus .PLUS"
 -------------------------------------------------------------------------------
+Alguns jogos de windows podem ser jogados no Batocera.PLUS por meio do wine.
+
+Configure o wine na aba aplicativos no gerenciador de arquivos (F1).
+Por padrao o wine salva seus arquivos em /userdata/system/configs/wine
+alguns jogos crian sua pasta separada dentro da pasta de save do jogo.
+Se algum jogo parar de funcionar considere remover a pasta Wine.
 
 Os jogos podem vir com um arquivo (.plus) ou uma pasta com arquivos.
 
-Exemplo:
+Jogos compactados usam o formato squashfs.
 
-My Game.plus        (pasta)
-|---- batocera.plus (arquivo)
-|---- game.exe      (arquivo)
-|---- game.dat      (arquivo) (se existir)
-|---- game.bin      (arquivo) (se existir)
-|---- ...                     (se existir)
+Exemplo 1: My Game.plus         (arquivo)
+
+Exemplo 2:  My Game.plus        (pasta)
+            |---- batocera.plus (arquivo)
+            |---- game.exe      (arquivo)
+            |---- game.dat      (arquivo) (se existir)
+            |---- game.bin      (arquivo) (se existir)
+            |---- ...                     (se existir)
 
 -------------------------------------------------------------------------------

@@ -124,7 +124,7 @@ fi
 ##
  # Ativa o ponteiro do mouse.
  ##
-matchbox-remote -s
+mouse-pointer on
 
 ################################################################################
 
@@ -192,6 +192,6 @@ fi
  ##
 mv -f "$SAVE_DIR/prefs.js.original"             "$SAVE_DIR/prefs.js"
 mv -f "$SAVE_DIR/sessionstore.jsonlz4.original" "$SAVE_DIR/sessionstore.jsonlz4"
-matchbox-remote -h  # Desativa o ponteiro do mouse.
+mouse-pointer off  # Desativa o ponteiro do mouse.
 
 exit 0

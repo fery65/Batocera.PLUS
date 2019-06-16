@@ -1,0 +1,71 @@
+<theme>
+    <formatVersion>4</formatVersion>
+<include>./../theme.xml</include>
+	<view name="system">
+
+		<image name="SystemBackground" extra="true">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<path>./art/comic.png</path>
+		</image>
+		
+		<image name="Border" extra="true">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<path>./../art/border.png</path>
+		</image>
+		
+		<image name="logo">
+			<path>./art/system.png</path>
+        </image>
+		
+	</view>
+
+	<view name="basic, detailed, video">
+		
+		<image name="logo">
+			<path>./art/system.png</path>
+			<pos>0.765 110</pos>
+			<maxSize>100 100</maxSize>
+			<origin>0.5 0.5</origin>
+		</image>
+		
+		
+		<image name="classic_logo" extra="true">
+			<path>./art/system.png</path>
+			<pos>0.20 0.12</pos>
+			<maxSize>0.30 0.1</maxSize>
+			<origin>0.5 0.5</origin>
+		</image>
+		
+		<image name="comic_rip" extra="true">
+			<path>./../art/rip/sg100.png</path>
+			<pos>0.865 0.75</pos>
+			<maxSize>0.32 0.32</maxSize>
+			<origin>0.5 0.5</origin>
+		</image>
+		
+		
+		
+	</view>
+
+	<view name="basic">		
+	</view>
+
+	<view name="detailed">
+	
+		<image name="controller" extra="true">
+			<path>./art/controller.svg</path>
+			<pos>0.600 0.540</pos>
+			<maxSize>0.29 0.10</maxSize>
+			<origin>0.5 0.5</origin>
+			<color>ffffff</color>
+		</image>
+		
+	</view>
+	
+</theme>

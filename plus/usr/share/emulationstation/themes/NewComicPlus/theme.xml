@@ -1,0 +1,292 @@
+<!--
+Theme: New Comic Book
+version: 1.0
+author: Edição deste tema feita por José Adriano de Souza email: joseadrianotec@gmail.com, esta é a edição de um tema já existente chamado de comicbook criado por : Kevin Thueringer
+e tem como base támbem o tema: Retrorama criado por : Filipe Bello a estes muito obrigado por seu trabalho prestado espero que não se importe com esta edição, esta foi feita pensando em atender o pessoal que
+usa o sistema Batocera linux, que não tem suporte ao sistema carrosel, enfim meu muito obrigado.
+
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>4</formatVersion>
+
+<feature supported="carousel">
+<view name="system">
+
+<!-- CONFIGURAÇÕES REFERENTES AO TIPO DE CARROSSEL USADO -->	
+<carousel name="systemcarousel">   
+<type>horizontal</type>
+<!-- <pos>0.0 0.318</pos> -->
+<pos>0.0 0.0</pos>
+<size>1.0 1.0</size>
+<logoScale>1.5</logoScale>
+<logoSize>0.23 0.23</logoSize>
+<color>00000000</color>
+<maxLogoCount>1</maxLogoCount>
+</carousel>
+
+<!-- AQUI ESTA CARREGANDO INFORMAÇÕES DO SISTEMA -->	
+<text name="systemInfo">
+<pos>0.0 0.59</pos>
+<backgroundColor>00000000</backgroundColor>
+<color>ffffff</color>
+<fontPath>./art/Cabin-Bold.ttf</fontPath>
+<fontSize>0.035</fontSize>
+</text>
+
+<!-- AQUI ESTA CARREGANDO O BACKGROUND DO MENU PRINCIPAL -->
+<image name="background" extra="true">
+<origin>0 0</origin>     
+<pos>0 0</pos>
+<size>1 1</size>
+</image>     
+         
+</view>
+</feature>
+
+<view name="system">
+	<sound name="directory">
+	<path>./music/</path>
+	</sound>
+	</view>
+
+<!-- AQUI ESTA CARREGANDO A BARRA DE HELP DOS MENUS INTERNOS -->
+<view name="basic,detailed,video">
+<helpsystem name="help">
+<textColor>000000</textColor>
+<iconColor>000000</iconColor>
+<fontSize>0.03</fontSize> 
+<pos>0.020 0.940</pos>
+<fontPath>./art/Cabin-Bold.ttf</fontPath>                                  
+</helpsystem>
+</view>
+
+<!-- AQUI ESTA CARREGANDO A BARRA DE HELP DO MENU PRINCIPAL -->	
+<view name="system">
+<helpsystem name="help">
+<textColor>000000</textColor>
+<iconColor>000000</iconColor>
+<fontSize>0.03</fontSize>
+<pos>0.020 0.940</pos>
+<fontPath>./art/Cabin-Bold.ttf</fontPath>                              
+</helpsystem>
+</view>   
+
+<!-- AQUI ESTA CARREGANDO AS CONFIGURAÇÕES DO GAMELIST -->
+<view name="detailed,video">
+<textlist name="gamelist">
+<pos>0.04 0.23</pos>
+<size>0.415 0.58</size>
+<selectorColor>1c1c1c00</selectorColor>
+<selectedColor>EF66F3</selectedColor>
+<primaryColor>ffffff</primaryColor>
+<secondaryColor>ffffff</secondaryColor>
+<fontPath>./art/Cabin-Bold.ttf</fontPath>
+<fontSize>0.022</fontSize>
+<forceUppercase>1</forceUppercase>
+<scrollSound></scrollSound>
+<alignment>left</alignment> 
+<scrollSound>./art/scroll.wav</scrollSound>
+</textlist>
+</view>
+
+<view name="basic">
+<textlist name="gamelist">
+<pos>0.04 0.23</pos>
+<size>0.415 0.58</size>
+<selectorColor>1c1c1c00</selectorColor>
+<selectedColor>EF66F3</selectedColor>
+<primaryColor>ffffff</primaryColor>
+<secondaryColor>ffffff</secondaryColor>
+<fontPath>./art/Cabin-Bold.ttf</fontPath>
+<fontSize>0.026</fontSize>
+<forceUppercase>1</forceUppercase>
+<scrollSound></scrollSound>
+<alignment>center</alignment> 
+<scrollSound>./art/scroll.wav</scrollSound>
+</textlist>
+</view>   
+
+<!-- AQUI ESTA CARREGANDO O BACKGROUND DO MENU INTERNO DO BÁSICO -->
+<view name="basic">
+<image name="logo">
+<origin>0.5 0.0</origin>
+<pos>0.5 0.656</pos>
+<!-- <maxSize>0.323 0.323</maxSize> -->
+<maxSize>0.9 0.9</maxSize>
+</image>
+
+<image name="background1" extra="true">
+<origin>0 0</origin>
+<pos>0 0</pos>
+<size>1 1</size>
+<path>./art/border.png</path>
+</image>
+</view>
+
+<!-- AQUI ESTA CARREGANDO O BACKGROUND DO MENU INTERNO DE VÍDEO -->
+<view name="video,detailed">
+
+<image name="logo">
+<origin>0.5 0.0</origin>
+<pos>0.5 0.656</pos>
+<maxSize>0.323 0.323</maxSize>
+</image>
+
+<image name="background1" extra="true">
+<origin>0 0</origin>
+<pos>0 0</pos>
+<size>1 1</size>
+<path>./art/menu.jpg</path>
+</image>
+</view> 
+
+   <view name="detailed,video">     
+      <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount, md_rating, md_developer, md_publisher, md_genre, md_playcount, md_lastplayed">
+         <pos>1 1</pos>
+      </text>
+      <text name="md_lbl_rating,md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount,md_lbl_players,md_developer, md_publisher, md_genre, md_playcount, md_lastplayed,md_description,md_players,md_releasedate">
+         <color>FFFFFF</color>
+         <fontPath>./art/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.016</fontSize>
+      </text>
+<text name="md_lbl_rating">
+	<color>23232300</color>
+	<pos>0.750 2.455</pos>
+</text>
+
+      <rating name="md_rating">
+         <pos>0.17 0.837</pos>
+         <size>0.0975 0.0975</size>
+         <filledPath>./art/full.png</filledPath>
+         <unfilledPath>./art/empty.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.762 1.12</pos>
+         <size>0.0625 0.025</size>
+         <color>23232300</color>         
+      </text>
+      <text name="md_players">
+         <forceUppercase>1</forceUppercase>
+         <pos>0.62 0.37</pos>
+         <size>0.18 0.02</size> 
+         <fontSize>0.06</fontSize>        
+      </text>
+      <text name="md_lbl_releasedate">
+         <pos>0.53 0.602</pos>
+         <size>0.0625 0.025</size>
+         <color>EF66F3</color>         
+      </text>
+      <datetime name="md_releasedate">
+         <color>232323</color>
+         <forceUppercase>1</forceUppercase>
+	<size>0.16 0.02</size>
+	<pos>0.58 0.598</pos>
+	<fontSize>0.02</fontSize>
+      </datetime>
+      <text name="md_lbl_genre">
+        <pos>0.53 0.11</pos>
+         <size>0.0625 0.025</size>
+         <color>EF66F3</color>         
+      </text>
+      <text name="md_genre">
+        <fontSize>0.02</fontSize>
+	<pos>0.575 0.099</pos>
+	<size>0.14 0.02</size>
+      </text>
+      <text name="md_lbl_developer">
+         <pos>500 2.94</pos>
+         <size>0.12 0.025</size>
+         <color>EF66F3</color>         
+      </text>
+      <text name="md_developer">
+         <pos>0.74 2.94</pos>
+         <size>0.12 0.025</size>
+      </text> 
+      <text name="md_lbl_publisher">
+         <pos>100 2.30</pos>
+         <size>0.12 0.025</size>
+         <color>EF66F3</color>         
+      </text>
+      <text name="md_publisher">
+         <pos>0.72 0.936</pos>
+         <size>0.12 0.025</size>
+      </text> 
+      <text name="md_lbl_lastplayed">
+         <pos>0.53 .166</pos>
+         <size>0.0625 0.025</size>
+         <color>EF66F3</color>         
+      </text>
+      <datetime name="md_lastplayed">
+	<color>232323</color>
+	<forceUppercase>1</forceUppercase>
+         <pos>0.640 .165</pos>
+	<fontSize>0.010</fontSize>
+	<size>0.20 0.02</size>
+      </datetime>                  
+	<text name="md_description">
+	<pos>0.5295 0.658</pos>
+	<size>0.202 0.2635</size>
+	<color>232323</color>
+	<fontPath>./art/comic.otf</fontPath>
+	<fontSize>0.022</fontSize>
+	<alignment>left</alignment>
+	<forceUppercase>0</forceUppercase>
+	<lineSpacing>1</lineSpacing>
+</text>
+
+<text name="md_lbl_playcount">
+	<pos>0.532 0.137</pos>
+</text>
+
+	<text name="md_playcount">
+	<fontPath>./art/comic.otf</fontPath>
+	<size>0.18 0.02</size>
+	<pos>0.62 0.129</pos>
+	<fontSize>0.0400</fontSize>
+	</text>
+
+   </view>
+   
+
+
+   <view name="detailed">
+      <image name="logo">
+         <origin>0.5 0.0</origin>
+         <pos>0.5 0.656</pos>
+         <maxSize>0.323 0.323</maxSize>
+      </image>
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.8392 0.4245</pos>
+         <maxSize>0.258 0.403</maxSize>
+      </image>  
+   </view>
+
+   <view name="video">
+      <image name="logo">
+         <origin>0.5 0.0</origin>
+         <pos>0.5 0.656</pos>
+         <maxSize>0.323 0.323</maxSize>
+      </image>
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.84 0.42</pos>
+         <maxSize>0.25 0.35</maxSize>
+	 <showSnapshotNoVideo>true</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      </video>
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.918 0.525</pos>
+         <maxSize>0.127 0.17</maxSize>
+      </image>      
+      <image name="md_marquee">
+         <pos>1 1</pos>
+         <origin>0 0</origin>
+         <maxSize>0 0</maxSize>
+      </image>
+   </view>
+   
+</theme>

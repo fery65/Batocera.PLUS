@@ -1,7 +1,5 @@
 ## SYSTEM SATELLAVIEW ##
 -------------------------------------------------------------------------------
-ROM files extensions accepted: ".bin .bs .fig .smc .sfc .swc .mgd .zip .7z .7z"
--------------------------------------------------------------------------------
 BIOS: STBIOS.bin (md5sum) d3a44ba7d42a74d3ac58cb9c14c6a5ca
 -------------------------------------------------------------------------------
 Também conhecido no Brasil como a PSN ou a Live do Super Nintendo.

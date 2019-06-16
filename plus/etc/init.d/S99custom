@@ -8,8 +8,8 @@ SHARE='/userdata'
 udevadm control -R &
 
 ### Desativa atualizações automáticas.
-if [ -f "$SHARE/system/recalbox.conf" ]; then
-    sed -i s/'^updates.enabled=1/updates.enabled=0/' "$SHARE/system/recalbox.conf"
+if [ -f "$SHARE/system/batocera.conf" ]; then
+    sed -i s/'^updates.enabled=1/updates.enabled=0/' "$SHARE/system/batocera.conf"
 fi
 
 ### Carrega scripts de inicialização criado pelo usuário.
