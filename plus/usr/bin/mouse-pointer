@@ -12,12 +12,9 @@
  # Exibe o ponteiro do mouse.
  ##
 function mouseOn() {
-    if ! [ -f '/tmp/mouse_pointer_keys' ]; then
-        if ! [ "$(pidof unclutter)" ]; then
-            unclutter --timeout 1 -b &
-        fi
+    if [ "$(pidof unclutter)" ]; then
+        killall unclutter &
     fi
-    touch '/tmp/mouse_pointer_keys'
 }
 
 ################################################################################
@@ -26,12 +23,9 @@ function mouseOn() {
  # Oculta o ponteiro do mouse
  ##
 function mouseOff() {
-    if [ -f '/tmp/mouse_pointer_keys' ]; then
-        if [ "$(pidof unclutter)" ]; then
-            killall unclutter &
-        fi
+    if ! [ "$(pidof unclutter)" ]; then
+        unclutter --timeout 1 -b
     fi
-    rm '/tmp/mouse_pointer_keys'
 }
 
 ################################################################################
@@ -41,10 +35,10 @@ function mouseOff() {
  # Se o ponteiro estiver mostrando oculta, se estiver oculto exibe.
  ##
 function mouseOnOff() {
-    if [ -f '/tmp/mouse_pointer_keys' ]; then
-        mouseOff
-    else
+    if [ "$(pidof unclutter)" ]; then
         mouseOn
+    else
+        mouseOff
     fi
 }
 

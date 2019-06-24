@@ -5,8 +5,8 @@
 VERSION='4.05'
 
 # Pasta temporária em uma partição Linux.
-TEMP_DIR='tmp'
-#TEMP_DIR='/media/NO_LABEL/tmp'
+#TEMP_DIR='tmp'
+TEMP_DIR='/media/NO_LABEL/tmp'
 #TEMP_DIR='/media/NO_LABEL_1/tmp'
 
 # Imagem oficial do batocera.linux.

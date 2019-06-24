@@ -121,12 +121,6 @@ elif [ -e $SAVE_DIR/.asoundrc ]; then
 fi
 
 ################################################################################
-##
- # Ativa o ponteiro do mouse.
- ##
-mouse-pointer on
-
-################################################################################
 
 ##
  #  Executa o navegador normalmente.
@@ -192,6 +186,5 @@ fi
  ##
 mv -f "$SAVE_DIR/prefs.js.original"             "$SAVE_DIR/prefs.js"
 mv -f "$SAVE_DIR/sessionstore.jsonlz4.original" "$SAVE_DIR/sessionstore.jsonlz4"
-mouse-pointer off  # Desativa o ponteiro do mouse.
 
 exit 0
