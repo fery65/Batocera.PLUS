@@ -148,7 +148,7 @@ EXPORTS
   NtGetContextThread @143
   NtGetCurrentProcessorNumber @144
   NtGetPlugPlayEvent @145 PRIVATE
-  NtGetTickCount=get_tick_count64 @146
+  NtGetTickCount @146
   NtGetWriteWatch @147
   NtImpersonateAnonymousToken @148
   NtImpersonateClientOfPort @149 PRIVATE
@@ -928,7 +928,7 @@ EXPORTS
   ZwGetContextThread=NtGetContextThread @923 PRIVATE
   ZwGetCurrentProcessorNumber=NtGetCurrentProcessorNumber @924 PRIVATE
   ZwGetPlugPlayEvent @925 PRIVATE
-  ZwGetTickCount=get_tick_count64 @926 PRIVATE
+  ZwGetTickCount=NtGetTickCount @926 PRIVATE
   ZwGetWriteWatch=NtGetWriteWatch @927 PRIVATE
   ZwImpersonateAnonymousToken=NtImpersonateAnonymousToken @928 PRIVATE
   ZwImpersonateClientOfPort @929 PRIVATE

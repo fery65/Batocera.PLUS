@@ -2,7 +2,7 @@
 ################################################################################
 
 # Versão do Batocera.PLUS.
-VERSION='4.01'
+VERSION='4.05'
 
 # Pasta temporária em uma partição Linux.
 TEMP_DIR='tmp'
@@ -11,7 +11,7 @@ TEMP_DIR='tmp'
 
 # Imagem oficial do batocera.linux.
 IMG_OFICIAL='img/batocera-5.22-x86_64-20190609.img.gz'
-IMG_ZERO='img/BatoceraZero3GB.7z'
+IMG_ZERO='img/BatoceraZero2.5GB.7z'
 
 # Arquivos extras do Batocera.PLUS.
 PLUS_DIR='plus'
@@ -94,12 +94,16 @@ echo 'Copiando arquivos do batocera.plus...'
 cp -r -f "$PLUS_DIR/"* "$TEMP_DIR/squashfs-root"  || exit $?
 
 echo 'Descompactando Libretro mame0200...'
-###7zr x "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro" || exit $?
-###rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z."*
+7zr x "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z.001" -o"$TEMP_DIR/squashfs-root/usr/lib/libretro" || exit $?
+rm -f "$TEMP_DIR/squashfs-root/usr/lib/libretro/mame0200_libretro.so.7z."*
 
 echo 'Descompactando Firefox libxul.so...'
 7zr x "$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr/libxul.so.7z" -o"$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr" || exit $?
 rm -f "$TEMP_DIR/squashfs-root/opt/Firefox/firefox-esr/libxul.so.7z"
+
+echo 'Descompactando wine-mono.msi...'
+7zr x "$TEMP_DIR/squashfs-root/opt/Wine/apps/wine-mono.msi.7z.001" -o"$TEMP_DIR/squashfs-root/opt/Wine/apps" || exit $?
+rm -f "$TEMP_DIR/squashfs-root/opt/Wine/apps/wine-mono.msi.7z."*
 
 echo 'Compactando arquivo squashfs...'
 mksquashfs "$TEMP_DIR/squashfs-root/"* "$TEMP_DIR/batocera" || exit $?

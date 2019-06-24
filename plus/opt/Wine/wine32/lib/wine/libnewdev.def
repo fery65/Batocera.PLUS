@@ -5,8 +5,8 @@ LIBRARY newdev.dll
 EXPORTS
   DeviceInternetSettingUiW@0 @1 PRIVATE
   DiInstallDevice@0 @2 PRIVATE
-  DiInstallDriverA@24 @3
-  DiInstallDriverW@24 @4
+  DiInstallDriverA@16 @3
+  DiInstallDriverW@16 @4
   DiRollbackDriver@0 @5 PRIVATE
   DiShowUpdateDevice@0 @6 PRIVATE
   DiUninstallDevice@0 @7 PRIVATE

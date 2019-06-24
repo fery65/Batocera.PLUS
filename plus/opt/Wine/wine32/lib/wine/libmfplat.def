@@ -133,34 +133,35 @@ EXPORTS
   MFPutWorkItemEx@8 @128
   MFPutWorkItemEx2@12 @129
   MFRecordError@0 @130 PRIVATE
-  MFRemovePeriodicCallback@4 @131
-  MFScheduleWorkItem@20 @132
-  MFScheduleWorkItemEx@16 @133
-  MFSerializeAttributesToStream@0 @134 PRIVATE
-  MFSerializeEvent@0 @135 PRIVATE
-  MFSerializeMediaTypeToStream@0 @136 PRIVATE
-  MFSerializePresentationDescriptor@0 @137 PRIVATE
-  MFSetSockaddrAny@0 @138 PRIVATE
-  MFShutdown@0 @139
-  MFStartup@8 @140
-  MFStreamDescriptorProtectMediaType@0 @141 PRIVATE
-  MFTEnum@40 @142
-  MFTEnumEx@36 @143
-  MFTGetInfo@0 @144 PRIVATE
-  MFTRegister@60 @145
-  MFTRegisterLocal@32 @146
-  MFTRegisterLocalByCLSID@0 @147 PRIVATE
-  MFTUnregister@16 @148
-  MFTUnregisterLocal@4 @149
-  MFTUnregisterLocalByCLSID@0 @150 PRIVATE
-  MFTraceError@0 @151 PRIVATE
-  MFTraceFuncEnter@0 @152 PRIVATE
-  MFUnblockThread@0 @153 PRIVATE
-  MFUnlockPlatform@0 @154
-  MFUnlockWorkQueue@4 @155
-  MFUnwrapMediaType@8 @156
-  MFValidateMediaTypeSize@0 @157 PRIVATE
-  MFWrapMediaType@16 @158
-  MFllMulDiv@0 @159 PRIVATE
-  PropVariantFromStream@0 @160 PRIVATE
-  PropVariantToStream@0 @161 PRIVATE
+  MFRegisterLocalSchemeHandler@8 @131
+  MFRemovePeriodicCallback@4 @132
+  MFScheduleWorkItem@20 @133
+  MFScheduleWorkItemEx@16 @134
+  MFSerializeAttributesToStream@0 @135 PRIVATE
+  MFSerializeEvent@0 @136 PRIVATE
+  MFSerializeMediaTypeToStream@0 @137 PRIVATE
+  MFSerializePresentationDescriptor@0 @138 PRIVATE
+  MFSetSockaddrAny@0 @139 PRIVATE
+  MFShutdown@0 @140
+  MFStartup@8 @141
+  MFStreamDescriptorProtectMediaType@0 @142 PRIVATE
+  MFTEnum@40 @143
+  MFTEnumEx@36 @144
+  MFTGetInfo@0 @145 PRIVATE
+  MFTRegister@60 @146
+  MFTRegisterLocal@32 @147
+  MFTRegisterLocalByCLSID@0 @148 PRIVATE
+  MFTUnregister@16 @149
+  MFTUnregisterLocal@4 @150
+  MFTUnregisterLocalByCLSID@0 @151 PRIVATE
+  MFTraceError@0 @152 PRIVATE
+  MFTraceFuncEnter@0 @153 PRIVATE
+  MFUnblockThread@0 @154 PRIVATE
+  MFUnlockPlatform@0 @155
+  MFUnlockWorkQueue@4 @156
+  MFUnwrapMediaType@8 @157
+  MFValidateMediaTypeSize@0 @158 PRIVATE
+  MFWrapMediaType@16 @159
+  MFllMulDiv@0 @160 PRIVATE
+  PropVariantFromStream@0 @161 PRIVATE
+  PropVariantToStream@0 @162 PRIVATE

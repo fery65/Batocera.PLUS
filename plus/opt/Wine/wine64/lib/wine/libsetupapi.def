@@ -370,7 +370,7 @@ EXPORTS
   SetupDiInstallClassExA @365 PRIVATE
   SetupDiInstallClassExW @366 PRIVATE
   SetupDiInstallClassW @367
-  SetupDiInstallDevice @368 PRIVATE
+  SetupDiInstallDevice @368
   SetupDiInstallDeviceInterfaces @369
   SetupDiInstallDriverFiles @370
   SetupDiLoadClassIcon @371

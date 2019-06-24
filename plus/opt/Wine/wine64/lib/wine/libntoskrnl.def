@@ -366,7 +366,7 @@ EXPORTS
   IoDeleteDevice @361
   IoDeleteDriver @362
   IoDeleteSymbolicLink @363
-  IoDetachDevice @364 PRIVATE
+  IoDetachDevice @364
   IoDeviceHandlerObjectSize @365 PRIVATE
   IoDeviceHandlerObjectType @366 PRIVATE
   IoDeviceObjectType @367 DATA
@@ -520,7 +520,7 @@ EXPORTS
   KeAcquireSpinLockAtDpcLevel @515
   KeAcquireSpinLockRaiseToDpc @516
   KeAddSystemServiceTable @517 PRIVATE
-  KeAreApcsDisabled @518 PRIVATE
+  KeAreApcsDisabled @518
   KeAttachProcess @519 PRIVATE
   KeBugCheck @520 PRIVATE
   KeBugCheckEx @521 PRIVATE

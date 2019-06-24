@@ -133,34 +133,35 @@ EXPORTS
   MFPutWorkItemEx @128
   MFPutWorkItemEx2 @129
   MFRecordError @130 PRIVATE
-  MFRemovePeriodicCallback @131
-  MFScheduleWorkItem @132
-  MFScheduleWorkItemEx @133
-  MFSerializeAttributesToStream @134 PRIVATE
-  MFSerializeEvent @135 PRIVATE
-  MFSerializeMediaTypeToStream @136 PRIVATE
-  MFSerializePresentationDescriptor @137 PRIVATE
-  MFSetSockaddrAny @138 PRIVATE
-  MFShutdown @139
-  MFStartup @140
-  MFStreamDescriptorProtectMediaType @141 PRIVATE
-  MFTEnum @142
-  MFTEnumEx @143
-  MFTGetInfo @144 PRIVATE
-  MFTRegister @145
-  MFTRegisterLocal @146
-  MFTRegisterLocalByCLSID @147 PRIVATE
-  MFTUnregister @148
-  MFTUnregisterLocal @149
-  MFTUnregisterLocalByCLSID @150 PRIVATE
-  MFTraceError @151 PRIVATE
-  MFTraceFuncEnter @152 PRIVATE
-  MFUnblockThread @153 PRIVATE
-  MFUnlockPlatform @154
-  MFUnlockWorkQueue @155
-  MFUnwrapMediaType @156
-  MFValidateMediaTypeSize @157 PRIVATE
-  MFWrapMediaType @158
-  MFllMulDiv @159 PRIVATE
-  PropVariantFromStream @160 PRIVATE
-  PropVariantToStream @161 PRIVATE
+  MFRegisterLocalSchemeHandler @131
+  MFRemovePeriodicCallback @132
+  MFScheduleWorkItem @133
+  MFScheduleWorkItemEx @134
+  MFSerializeAttributesToStream @135 PRIVATE
+  MFSerializeEvent @136 PRIVATE
+  MFSerializeMediaTypeToStream @137 PRIVATE
+  MFSerializePresentationDescriptor @138 PRIVATE
+  MFSetSockaddrAny @139 PRIVATE
+  MFShutdown @140
+  MFStartup @141
+  MFStreamDescriptorProtectMediaType @142 PRIVATE
+  MFTEnum @143
+  MFTEnumEx @144
+  MFTGetInfo @145 PRIVATE
+  MFTRegister @146
+  MFTRegisterLocal @147
+  MFTRegisterLocalByCLSID @148 PRIVATE
+  MFTUnregister @149
+  MFTUnregisterLocal @150
+  MFTUnregisterLocalByCLSID @151 PRIVATE
+  MFTraceError @152 PRIVATE
+  MFTraceFuncEnter @153 PRIVATE
+  MFUnblockThread @154 PRIVATE
+  MFUnlockPlatform @155
+  MFUnlockWorkQueue @156
+  MFUnwrapMediaType @157
+  MFValidateMediaTypeSize @158 PRIVATE
+  MFWrapMediaType @159
+  MFllMulDiv @160 PRIVATE
+  PropVariantFromStream @161 PRIVATE
+  PropVariantToStream @162 PRIVATE
